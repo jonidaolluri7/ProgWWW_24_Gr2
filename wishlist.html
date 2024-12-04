@@ -5,11 +5,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
+    <script>
+        function addToCart() {
+            alert('Added to Cart!');
+            event.preventDefault();
+        }
+    </script>
 </head>
 <body> 
 <header class="header">
     <div class="header-container">
-        <a href="index.html" class="logo"><img src="#"></a>
+        <a href="index.html" class="logo"><img style="width:5rem; height:5rem;" src="img/logo.png"></a>
         <div class="icons">
             <a href="#" id="user-button"><i class="fa-solid fa-user"></i></a>
             <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
@@ -34,7 +40,51 @@
         </ul>
     </div>
 </header>
-   
+<div class="main">
+    <section class="products">
+        <div class="container-box">
+            <form action="" method="POST" class="box">
+                <a href="viewproduct6.html"><img class="image" src="img/product6.jpg" /></a>
+                <div class="flex">
+                    <div>
+                        <a class="line" href="viewproduct6.html">
+                            <h3 class="name">Product 6</h3>
+                        </a>
+                        <input type="hidden" name="productid" value="6">
+                        <p class="price">Price $60</p>
+                    </div>
+                    <p onclick="addToCart()">
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </p>
+                </div>
+                <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                <a class="btn" href="checkout.html">Buy Now</a>
+            </form>
+        
+            <form action="" method="POST" class="box">
+                <a href="viewproduct7.html"><img class="image" src="img/product7.jpg" /></a>
+                <div class="flex">
+                    <div>
+                        <a class="line" href="viewproduct7.html">
+                            <h3 class="name">Product 7</h3>
+                        </a>
+                        <input type="hidden" name="productid" value="7">
+                        <p class="price">Price $70</p>
+                    </div>
+                    <p onclick="addToCart()">
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </p>
+                </div>
+                <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                <a class="btn" href="checkout.html">Buy Now</a>
+            </form>
+        </div>
+    </section>
+</div>
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
