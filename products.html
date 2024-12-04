@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
+    <title>Jewelry Shop</title>
+</head>
+<body> 
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo"><img src="#"></a>
+        <div class="icons">
+            <a href="#" id="user-button"><i class="fa-solid fa-user"></i></a>
+            <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
+            <a href='cart.html' class='cart-button'><i class='fa-solid fa-cart-shopping'></i></a>     
+            <i id="menu-button" class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <nav class="navbar">
+            <ul class="nav-items">
+                <li><a href="products.html">All</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+            </ul>
+    </nav>
+    <div class='profile-box'>
+        <ul>
+        <li><a href='profile.html'>My Profile</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href='#' id='sign-out'>Sign Out</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="main">
+    <div class="welcome">
+        <img src="#" height="150px" width="120px" >
+        <div>
+            <h1>Shop</h1>
+            <p>Fames ac turpis egestas sed tempus urna et. Mattis pellentesque id nibh tortor.
+                Dui vivamus arcu felis bibendum ut tristique et. Odio tempor orci dapibus ultrices in.
+                A condimentum vitae sapien pellentesque habitant. In nisl nisi scelerisque eu. Ultrices
+                dui sapien eget mi proin.</p>
+        </div>
+    </div>
+    <section class="products">
+        <div class="container-box">
+            <div class="product-container">
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct1.html"><img class="image" src="img/product1.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct1.html">
+                                <h3 class="name">Product 1</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="1">
+                            <p class="price">Price $10</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct2.html"><img class="image" src="img/product2.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct2.html">
+                                <h3 class="name">Product 2</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="2">
+                            <p class="price">Price $20</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct3.html"><img class="image" src="img/product3.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct3.html">
+                                <h3 class="name">Product 3</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="3">
+                            <p class="price">Price $30</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct4.html"><img class="image" src="img/product4.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct4.html">
+                                <h3 class="name">Product 4</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="4">
+                            <p class="price">Price $40</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct5.html"><img class="image" src="img/product5.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct5.html">
+                                <h3 class="name">Product 5</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="5">
+                            <p class="price">Price $50</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct6.html"><img class="image" src="img/product6.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct6.html">
+                                <h3 class="name">Product 6</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="6">
+                            <p class="price">Price $60</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct7.html"><img class="image" src="img/product7.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct7.html">
+                                <h3 class="name">Product 7</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="7">
+                            <p class="price">Price $70</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+
+                <form action="" method="POST" class="box">
+                    <a href="viewproduct8.html"><img class="image" src="img/product8.jpg" /></a>
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="flex">
+                        <div>
+                            <a class="line" href="viewproduct8.html">
+                                <h3 class="name">Product 7</h3>
+                            </a>
+                            <input type="hidden" name="productid" value="7">
+                            <p class="price">Price $70</p>
+                        </div>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </form>
+            
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="card">
+                <h3>Our Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Shipping</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Locations</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="join">
+                    <h2>Join Us</h2>
+                    <form action="">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </form>
+                </div>
+                <div class="socials">
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <p>&copy; Jewelry Shop 2024. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
