@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
-    <script>
-        function addToWishlist() {
-            alert('Added to Wishlist!');
-            event.preventDefault();
-        }
-        function addToCart() {
-            alert('Added to Cart!');
-            event.preventDefault();
-        }
-    </script>
     <title>Jewelry Shop</title>
     <script>
-         function addToWishlist() {
+        function addToWishlist() {
             alert('Added to WishList!');
-            event.preventDefault();
-        }
-        function addToCart() {
-            alert('Added to Cart!');
             event.preventDefault();
         }
     </script>
@@ -29,7 +15,7 @@
 <body> 
 <header class="header">
     <div class="header-container">
-        <a href="index.html" class="logo"><img src="#"></a>
+        <a href="index.html" class="logo"><img style="width:5rem; height:5rem;" src="img/logo.png"></a>
         <div class="icons">
             <a href="#" id="user-button"><i class="fa-solid fa-user"></i></a>
             <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
@@ -54,41 +40,51 @@
         </ul>
     </div>
 </header>
-
 <div class="main">
     <section class="products">
-        <div class="item">
-            <form action="" method="POST" class="item-box">
-                <img class="image" src="img/product8.jpg" />
-                <div class="item-details">
-                    <div class="details">
-                        <h3 class="name">Earring 2</h3>
-                        <p class="price">$47</p>
-                        <p class="d">Description of earring 2</p>
-                        <p class="price">Color: silver</p>
+        <div class="container-box">
+            <form action="" method="POST" class="box">
+                <a href="viewproduct3.html"><img class="image" src="img/product3.jpg" /></a>
+                <p onclick="addToWishlist()">
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </p>
+                <div class="flex">
+                    <div>
+                        <a class="line" href="viewproduct3.html">
+                            <h3 class="name">Product 6</h3>
+                        </a>
+                        <input type="hidden" name="productid" value="3">
+                        <p class="price">Price $60</p>
                     </div>
-                    <div class="flex">
-                        <p onclick="addToWishlist">
-                            <button type="submit" id="addToWishlist" name="addToWishlist">
-                                Add to Wishlist <i class="fa-solid fa-heart"></i>
-                            </button>
-                        </p>
-                        <p onclick="addToCart">
-                            <button type="submit" id="addToCart" name="addToCart">
-                                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </p>
-                    </div>
-                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity" />
-                    <a class="btn" href="checkout.html">Buy Now</a>
                 </div>
+                <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                <a class="btn" href="checkout.html">Buy Now</a>
+            </form>
+        
+            <form action="" method="POST" class="box">
+                <a href="viewproduct5.html"><img class="image" src="img/product5.jpg" /></a>
+                <p onclick="addToWishlist()">
+                    <button type="submit" id="addToWishlist" name="addToWishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </p>
+                <div class="flex">
+                    <div>
+                        <a class="line" href="viewproduct5.html">
+                            <h3 class="name">Product 7</h3>
+                        </a>
+                        <input type="hidden" name="productid" value="5">
+                        <p class="price">Price $70</p>
+                    </div>
+                </div>
+                <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
+                <a class="btn" href="checkout.html">Buy Now</a>
             </form>
         </div>
     </section>
 </div>
-
-
-   
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
