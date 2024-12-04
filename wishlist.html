@@ -5,14 +5,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
-    <script>
-        function addToWishlist() {
-            alert('Added to Wishlist!');
-        }
-        function addToCart() {
-            alert('Added to Cart!');
-        }
-    </script>
 </head>
 <body> 
 <header class="header">
@@ -42,34 +34,6 @@
         </ul>
     </div>
 </header>
-
-<div class="main">
-    <section class="products">
-        <div class="item">
-            <form action="" method="POST" class="item-box">
-                <img class="image" src="img/product5.jpg" />
-                <div class="item-details">
-                    <div class="details">
-                        <h3 class="name">Bracelet 1</h3>
-                        <p class="price">$98</p>
-                        <p class="d">Description of bracelet 1</p>
-                        <p class="price">Color: silver</p>
-                    </div>
-                    <div class="flex">
-                        <button id="addToWishlist" name="addToWishlist" onclick="addToWishlist()">
-                            Add to Wishlist <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <button id="addToCart" name="addToCart" onclick="addToCart()">
-                            Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity" />
-                    <a class="btn" href="checkout.html">Buy Now</a>
-                </div>
-            </form>
-        </div>
-    </section>
-</div>
    
     <footer class="footer">
         <div class="container">
