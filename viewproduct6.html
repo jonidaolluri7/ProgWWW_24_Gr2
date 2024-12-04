@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
+    <title>Jewelry Shop</title>
+</head>
+<body> 
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo"><img src="#"></a>
+        <div class="icons">
+            <a href="#" id="user-button"><i class="fa-solid fa-user"></i></a>
+            <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
+            <a href='cart.html' class='cart-button'><i class='fa-solid fa-cart-shopping'></i></a>     
+            <i id="menu-button" class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <nav class="navbar">
+            <ul class="nav-items">
+                <li><a href="products.html">All</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+            </ul>
+    </nav>
+    <div class='profile-box'>
+        <ul>
+        <li><a href='profile.html'>My Profile</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href='#' id='sign-out'>Sign Out</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="main">
+    <section class="products">
+        <div class="item">
+            <form action="" method="POST" class="item-box">
+                <img class="image" src="img/product6.jpg" />
+                <div class="item-details">
+                    <div class="details">
+                        <h3 class="name">Bracelet 2</h3>
+                        <p class="price">$120</p>
+                        <p class="d">Description of bracelet 2</p>
+                        <p class="price">Color: silver</p>
+                    </div>
+                    <div class="flex">
+                        <button type="submit" id="addToWishlist" name="addToWishlist">
+                            Add to Wishlist <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button type="submit" id="addToCart" name="addToCart">
+                            Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity" />
+                    <a class="btn" href="checkout.html">Buy Now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+   
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="card">
+                    <h3>Our Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Shipping</h3>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="join">
+                        <h2>Join Us</h2>
+                        <form action="">
+                            <input type="email" name="email" placeholder="E-mail">
+                        </form>
+                    </div>
+                    <div class="socials">
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; Jewelry Shop 2024. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    </body>
+    </html>
