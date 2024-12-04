@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
-    <title>Jewelry Shop</title>
     <script>
         function addToWishlist() {
             alert('Added to Wishlist!');
+            event.preventDefault();
         }
         function addToCart() {
             alert('Added to Cart!');
+            event.preventDefault();
         }
     </script>
+    <title>Jewelry Shop</title>
 </head>
 <body> 
 <header class="header">
@@ -56,12 +58,11 @@
                         <p class="price">Color: silver</p>
                     </div>
                     <div class="flex">
-                        <button id="addToWishlist" name="addToWishlist" onclick="addToWishlist()">
+                        <p onclick="addToWishlist()"><button id="addToWishlist" name="addToWishlist">
                             Add to Wishlist <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <button id="addToCart" name="addToCart" onclick="addToCart()">
-                            Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
+                        </button></p>
+                        <p onclick="addToCart()"></p><button id="addToCart" name="addToCart">
+                            Add to Cart <i class="fa-solid fa-cart-shopping"></i></button></p>
                     </div>
                     <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity" />
                     <a class="btn" href="checkout.html">Buy Now</a>

@@ -51,9 +51,9 @@
         <div class="container-box">
                 <form action="" method="POST" class="box">
                     <a href="viewproduct1.html"><img class="image" src="img/product1.jpg" /></a>
-                    <button type="submit" id="addToWishlist" name="addToWishlist">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
+                    <p onclick="addToWishlist()"><button id="addToWishlist" name="addToWishlist">
+                        Add to Wishlist <i class="fa-solid fa-heart"></i>
+                    </button></p>
                     <div class="flex">
                         <div>
                             <a class="line" href="viewproduct1.html">
@@ -62,9 +62,8 @@
                             <input type="hidden" name="productid" value="1">
                             <p class="price">Price $10</p>
                         </div>
-                        <button type="submit" id="addToCart" name="addToCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
+                        <p onclick="addToCart()"></p><button id="addToCart" name="addToCart">
+                            Add to Cart <i class="fa-solid fa-cart-shopping"></i></button></p>
                     </div>
                     <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
                     <a class="btn" href="checkout.html">Buy Now</a>
