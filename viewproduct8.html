@@ -15,16 +15,6 @@
         }
     </script>
     <title>Jewelry Shop</title>
-    <script>
-         function addToWishlist() {
-            alert('Added to WishList!');
-            event.preventDefault();
-        }
-        function addToCart() {
-            alert('Added to Cart!');
-            event.preventDefault();
-        }
-    </script>
 </head>
 <body> 
 <header class="header">
@@ -68,14 +58,14 @@
                         <p class="price">Color: silver</p>
                     </div>
                     <div class="flex">
-                        <p onclick="addToWishlist">
+                        <p onclick="addToWishlist()">
                             <button type="submit" id="addToWishlist" name="addToWishlist">
-                                Add to Wishlist <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </button>
                         </p>
-                        <p onclick="addToCart">
+                        <p onclick="addToCart()">
                             <button type="submit" id="addToCart" name="addToCart">
-                                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </button>
                         </p>
                     </div>
