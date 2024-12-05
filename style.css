@@ -213,6 +213,7 @@ header{
 
 /* products*/
 .welcome p{
+    display: flex !important;
     margin-top: 1rem;
     width: 500px;
 }
