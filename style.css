@@ -2,6 +2,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 :root{
@@ -20,9 +22,8 @@ html{
 
 body{
     background-color: white;
-    width: 100%;
-    height: 100%;
-    margin-top: 0;
+    width: 100vw;
+    height: 100vh;
 
 }
 .main{
@@ -208,28 +209,41 @@ header{
 }
 
 /* products*/
-.welcome p{
-    display: flex !important;
+.welcome{
+    width: auto;
+    height: 160px;
+    padding: 1rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: var(--purple);
+    margin-bottom: 5rem;
+  }
+
+  .welcome p{
     margin-top: 1rem;
-    width: 500px;
-}
-.welcome img{
+    width: 50rem;
+  }
+  .welcome img{
     margin-top: 5px;
     margin-bottom: 5px;
-}
+  }
 .container-box{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(24rem,24rem));
 }
 .container-box .box{
-    padding: 2rem 1rem;
-    margin: 1rem;
+    padding: 1rem 2rem;
+    margin: 2rem;
     position: relative;
+    border-radius: 20px;
 }
   
 .container-box  .image{
     width: 100%;
-    height: 70%;
+    height: 60%;
 }
 .container-box .box .name, .item .name{
     font-size: 1.2rem;
@@ -317,6 +331,20 @@ header{
 .products .line, .item a{
     text-decoration: none;
 }
+
+.products .cart-total{
+    border-radius: .5rem;
+    /* max-width: 50vw; */
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+  }
+  .products .cart-total p{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #555;
+    text-transform: capitalize;
+  }
 
 /* view product */
 .item{
