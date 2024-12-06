@@ -5,13 +5,19 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
+    <script>
+        function logIn() {
+            alert('U have been logged in!');
+            event.preventDefault();
+        }
+    </script>
 </head>
 <body> 
 <header class="header">
     <div class="header-container">
         <a href="index.html" class="logo"><img style="width:5rem; height:5rem;" src="img/logo.png"></a>
         <div class="icons">
-            <a href='login.html' id="user-button"><i class="fa-solid fa-user"></i></a>
+            <a href="login.html" id="user-button"><i class="fa-solid fa-user"></i></a>
             <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
             <a href='cart.html' class='cart-button'><i class='fa-solid fa-cart-shopping'></i></a>     
             <i id="menu-button" class="fa-solid fa-bars"></i>
@@ -34,7 +40,44 @@
         </ul>
     </div>
 </header>
-   
+
+<div class="login-page">
+    <div class="form">
+        <form id="login-f" method="POST">
+            <div class="inputAndLabels">
+                <input type="email" placeholder="Email" id="lemail" name="lemail">
+            </div>
+            <div class="inputAndLabels">
+                <input type="password" placeholder="Password" id="lpassword" name="lpassword">
+            </div>
+            <p onclick="logIn()">
+                <input type="submit" id="submit-button" name="login" value="Log in">
+
+            </p>
+            <p class="form-message">Not registered?<button id="register-show">Create an account</button></p>
+        </form>
+        <!-- <form id="register-f" method="POST">
+            <div class="inputAndLabels">
+                <input type="text" placeholder="Name" id="name" name="name"/>
+            </div>
+            <div class="inputAndLabels">
+                <input type="text" placeholder="Lastname" id="lastname" name="lastname"/>
+            </div>
+            <div class="inputAndLabels">
+                <input type="email" placeholder="Email" id="email" name="email"/>
+            </div>
+            <div class="inputAndLabels">
+                <input type="password" placeholder="Password" id="password" name="password"/>
+            </div>
+            <div class="inputAndLabels">
+                <input type="password" placeholder="Confirm password" id="cpassword" name="cpassword"/>
+            </div>
+            <input type="submit" id="submit-button" name="register" value="Register">
+            <p class="form-message">Already registered? <button id="login-show">Sign in</button></p>
+        </form> -->
+    </div>
+</div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
