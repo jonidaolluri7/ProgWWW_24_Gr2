@@ -2,8 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
 }
 
 :root{
@@ -22,8 +20,8 @@ html{
 
 body{
     background-color: white;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
 }
 .main{
@@ -450,7 +448,7 @@ header{
     background: white;
   }
   .form h2{
-    color: var(--darkpink);
+    color: var(--darkpurple);
   }
   .form .form-message{
     margin: 15px 0 0 ;
@@ -464,13 +462,13 @@ header{
     padding: 3px;
     text-decoration: none;
     font-size: 15px;
-    background: var(--pink);
-    border: 1px solid var(--pink);
+    background: var(--purple);
+    border: 1px solid var(--purple);
     border-radius: 5px;
-    box-shadow: 0 0 5px var(--pink),  0 0 25px var(--pink),  0 0 50px var(--pink),  0 0 100px var(--pink);
+    box-shadow: 0 0 5px var(--purple),  0 0 25px var(--purple),  0 0 50px var(--purple),  0 0 100px var(--purple);
 }
 .form .form-message button:hover{
-    background: var(--darkpink);
+    background: var(--darkpurple);
 }
 
 #submit-button{
@@ -488,8 +486,8 @@ header{
     letter-spacing: 2px;
 }
 #submit-button:hover{
-    background: var(--darkpink);
+    background: var(--darkpurple);
     color: black;
     border-radius: 5px;
-    box-shadow: 0 0 5px var(--darkpink),  0 0 25px var(--darkpink),  0 0 50px var(--darkpink),  0 0 100px var(--darkpink);
+    box-shadow: 0 0 5px var(--darkpurple),  0 0 25px var(--darkpurple),  0 0 50px var(--darkpurple),  0 0 100px var(--darkpurple);
 }
