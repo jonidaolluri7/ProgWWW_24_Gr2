@@ -796,3 +796,16 @@ header{
 .video1{
     margin-right: 100px;
 }
+/* per canvas */
+.canvasE{
+    width: 40%;
+    height: 300px;
+    background-color: var(--purple);
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+}
+.canvasE h1{
+    color: var(--darkpurple);
+    padding-top: 20px;
+}
