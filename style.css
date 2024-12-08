@@ -6,7 +6,7 @@
 
 :root{
     --darkpurple :#430b4c;
-    --purple : #e4a5ef;
+    --purple : #e7baef;
     --lightblue : #d6e6ef;
     --blue: #2143ec;
 }
@@ -422,7 +422,7 @@ header{
     align-items: center;
   }
   .form{
-    margin: 0 auto;
+    margin:  auto;
     text-align: center;
     width: 400px;
     padding: 40px;
@@ -430,8 +430,17 @@ header{
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
   }
-  #login-f{
+  #login-f{ 
     display: block;
+  }
+
+  .inputAndLabels{
+    margin-bottom: 3.5rem;
+  }
+  
+  #register-show, #login-show{
+    margin-left: 20px;
+    box-shadow: none
   }
   #register-f{
     display: none;
@@ -441,7 +450,6 @@ header{
     padding: 10px 0;
     font-size: 13px;
     color: black;
-    /* margin-bottom: 30px; */
     border: none;
     border-bottom: 1px solid black;
     outline: none;
@@ -465,6 +473,7 @@ header{
     background: var(--purple);
     border: 1px solid var(--purple);
     border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 0 5px var(--purple),  0 0 25px var(--purple),  0 0 50px var(--purple),  0 0 100px var(--purple);
 }
 .form .form-message button:hover{
