@@ -96,3 +96,8 @@ if(login_show){
 
  
 
+    // 
+    function checkOut(){
+        alert('You have checked out that item!');
+        event.preventDefault();
+    }

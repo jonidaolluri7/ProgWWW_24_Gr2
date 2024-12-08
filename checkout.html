@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
+    <title>Jewelry Shop</title>
+</head>
+<body> 
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo"><img style="width:5rem; height:5rem;" src="img/logo.png"></a>
+        <div class="icons">
+            <a href='login.html' id="user-button"><i class="fa-solid fa-user"></i></a>
+            <a href='wishlist.html' class='cart-button'><i class='fa-solid fa-heart'></i></a>
+            <a href='cart.html' class='cart-button'><i class='fa-solid fa-cart-shopping'></i></a>     
+            <i id="menu-button" class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <nav class="navbar">
+            <ul class="nav-items">
+                <li><a href="products.html">All</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+
+            </ul>
+    </nav>
+    <div class='profile-box'>
+        <ul>
+        <li><a href='profile.html'>My Profile</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href='#' id='sign-out'>Sign Out</a></li>
+        </ul>
+    </div>
+</header>
+   
+<div class="main">
+    <div class="welcome">
+        <img src="img/2.jpg" height="150px" width="170px" >
+        <div>
+            <h1>Checkout</h1>
+            <p>Fames ac turpis egestas sed tempus urna et. Mattis pellentesque id nibh tortor.
+                Dui vivamus arcu felis bibendum ut tristique et. Odio tempor orci dapibus ultrices in.
+                A condimentum vitae sapien pellentesque habitant. In nisl nisi scelerisque eu. Ultrices
+                dui sapien eget mi proin.</p>
+        </div>
+    </div>
+
+    <section class="products-checkout">
+        <div class='billing-page'>  
+            <div class="form">     
+                <form id="checkout" method="POST">
+                    <legend>Billing details</legend>
+                    <input type="text" placeholder="Name" id="name" name="name" value=""/>
+                    <input type="text" placeholder="Lastname" id="lastname" name="lastname" value=""/>
+                    <input type="email" placeholder="Email" id="email" name="email" value=""/>
+                    <input type="tel" placeholder="Phone" id="phone" name="phone" value=""/>
+                    <input type="text" placeholder="Address" id="address" name="address" value=""/>
+                    <input type="text" placeholder="Country" id="country" name="country"/>
+                    <select name='city' class='input'>
+                        <option value=''>City</option>
+                        <option value='Prishtina'>Pristina</option>
+                        <option value='Gjakova'>Gjakova</option>
+                        <option value='Prizren'>Prizren</option>
+                        <option value='Mitrovica'>Mitrovica</option>
+                        <option value='Ferizaj'>Ferizaj</option>
+                        <option value='Gjilan'>Gjilan</option>
+                        <option value='Istog'>Istog</option>
+                        <option value='Lipjan'>Lipjan</option>
+                    </select>
+                    <input type='text' placeholder='Card Number' name='cardnumber' id='card-number'>
+
+                    <label style="float: left;margin-top: 10px;">Payment method</label><br>
+                    <div class="radioB" style="display: flex;margin-left: 130px;margin-top:10px ;">
+                        <input type="radio" id="credit-card" name="method" value="credit-card" style="width: 15px;height: 15px; margin-right: 5px;">
+                        <label for="credit-card">Credit Card</label><br>
+                        <input type="radio" id="paypal" name="method" value="paypal" style="width: 15px;height: 15px; margin-left: 20px; margin-right: 5px;">
+                        <label for="paypal">Paypal</label>
+                    </div>
+                   
+                    <p onclick="checkOut()">
+                        <input type="submit" id="submit-button" name="order" class='btn' value="Complete Purchase">
+                    </p>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="card">
+                    <h3>Our Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Shipping</h3>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="join">
+                        <h2>Join Us</h2>
+                        <form action="">
+                            <input type="email" name="email" placeholder="E-mail">
+                        </form>
+                    </div>
+                    <div class="socials">
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; Jewelry Shop 2024. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
