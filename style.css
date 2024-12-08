@@ -546,3 +546,36 @@ header{
 .second a:hover{
     color: var(--darkpurple);
 }
+
+/* about us */
+.productsA{
+    border: 2px solid var(--purple);
+    width: 25%;
+    height: 230px;
+    padding: 30px;
+    background-color: var(--purple);
+    text-align: left;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+}
+.productsA ol{
+    font-size: 25px;
+    color: var(--darkpurple);
+    text-align: left;
+    list-style-position: inside;
+}
+.productsA2{
+    border: 2px solid var(--purple);
+    width: 50%;
+    height: 230px;
+    padding: 30px;
+    background-color: var(--purple);
+    text-align: left;
+    margin-left: 100px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+}
+.productsA2 dl{
+    font-size: 20px;
+    color: var(--darkpurple);
+    text-align: left;
+    list-style-position: inside;
+}
