@@ -257,12 +257,16 @@ header{
 }
  .slide1{
     background-image: url('img/200.jpg');
+    background-attachment: scroll;
 }
  .slide2{
     background-image: url('img/100.jpg');
+    background-attachment: scroll;
 }
  .slide3{
     background-image: url('img/300.jpg');
+    background-attachment: scroll;
+
 }
 
 .left-arrow, .right-arrow{
@@ -640,16 +644,23 @@ header{
 .second a:hover{
     color: var(--darkpurple);
 }
+.second a:visited{
+    color:rgb(76, 7, 7) ;
+}.second a:active{
+    background-color: var(--purple);
+}
 
 /* about us */
 .productsA{
-    border: 2px solid var(--purple);
     width: 25%;
     height: 230px;
     padding: 30px;
     background-color: var(--purple);
     text-align: left;
     box-shadow: 20px 20px 25px var(--darkpurple); 
+    border-width: 3px;
+    border-style: dashed;
+    border-color: var(--darkpurple);
 }
 .productsA ol{
     font-size: 25px;
@@ -658,7 +669,9 @@ header{
     list-style-position: inside;
 }
 .productsA2{
-    border: 2px solid var(--purple);
+    border-width: 3px;
+    border-style: dashed;
+    border-color: var(--darkpurple);
     width: 50%;
     height: 230px;
     padding: 30px;
@@ -675,10 +688,15 @@ header{
 }
 .tableA{
     margin-top: 60px;
+    border-spacing: 10px;
+    table-layout: fixed;
 }
-.tableA h1{
+.tableA caption{
     text-align: center;
     color: var(--darkpurple);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 .tableA table {
     width: 100%;
@@ -702,7 +720,9 @@ header{
 
 /* form te about us */
 .formA{
-    border: 2px solid var(--purple);
+    border-width: 5px;
+    border-style: dotted;
+    border-color: var(--darkpurple);
     width: 50%;
     height: 500px;
     padding: 30px;
@@ -745,7 +765,18 @@ header{
     text-align: center;
 }
 .videos h1{
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: var(--darkpurple);
+    background-color: var(--purple);
     margin-bottom: 20px;
+    font-style: italic;
+    color: var(--darkpurple);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
 }
 .video1{
     margin-right: 100px;
