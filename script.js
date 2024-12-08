@@ -65,3 +65,34 @@ if(login_show){
         alert('You have a new account!');
         event.preventDefault();
     }
+
+
+    /* greeting */
+
+    function greetingUsers() {
+        const greeting = document.getElementById("greeting");
+        const now = new Date();
+        const hours = now.getHours();
+        const time = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
+        greeting.innerHTML = time + " Welcome to our jewelry collection.";
+    }
+
+    window.onload = greetingUsers;
+
+
+
+    
+    /* event */
+    const items = document.querySelectorAll("header .fa-solid");
+    items.forEach(item => {
+        item.addEventListener("mouseover", () => {
+        item.classList.add("highlight");
+        });
+        item.addEventListener("mouseleave", () => {
+        item.classList.remove("highlight");
+        });
+    });
+
+
+ 
+

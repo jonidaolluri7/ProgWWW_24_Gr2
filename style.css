@@ -31,6 +31,7 @@ body{
     margin: 0 auto;
 }
 
+
 /* header */
 header{
     position: fixed;
@@ -131,6 +132,11 @@ header{
   border-bottom:1px solid black ;
 } 
 
+.fa-solid.highlight{
+    position: relative;
+    top: 5px;
+}
+
 /* footer */
 .footer{
     position: relative;
@@ -204,6 +210,14 @@ header{
 .footer .card li a{
     color: black;
     text-decoration: none;
+}
+
+/* index */
+#greeting{
+    font-weight: normal;
+    border: 1px solid var(--darkpurple);
+    margin: 1rem;
+    padding: 1rem;
 }
 
 /* index slider 1 */
@@ -324,6 +338,7 @@ header{
     border-radius: 20px;
 }
   
+
 .container-box  .image{
     width: 100%;
     height: 60%;
