@@ -22,7 +22,7 @@ body{
     background-color: white;
     width: 100%;
     height: 100%;
-
+    overflow-x: hidden;
 }
 .main{
     position: relative;
@@ -205,6 +205,91 @@ header{
     color: black;
     text-decoration: none;
 }
+
+/* index slider 1 */
+.top{
+    position: relative;
+    margin-bottom: 2rem;
+}
+   .slider-top{
+    font-family: "Roboto",sans-serif; 
+    max-height: 90vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.slider__slider{
+    height: 80vh;
+    min-width: 100vw;
+    width: 100%;
+    scroll-snap-align: start;
+    background-position: center center;
+    background-size:cover ;
+    position: relative;
+}
+.slider__slider .slide-detail{
+    position: absolute;
+    height: 200px;
+    top: 80%;
+    left: 10%;
+}
+.slider__slider .slide-detail h1{
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.button{
+    color: black;
+    padding: 1rem;
+    border: 1px solid var(--darkpurple);
+    border-radius: 5px;
+    background-color: var(--purple);
+    text-decoration: none;
+}
+.button:hover{
+    background-color: var(--lightblue);
+ 
+}
+ .slide1{
+    background-image: url('img/200.jpg');
+}
+ .slide2{
+    background-image: url('img/100.jpg');
+}
+ .slide3{
+    background-image: url('img/300.jpg');
+}
+
+.left-arrow, .right-arrow{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    padding: 0.6em;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius:50% ;
+    background: var(--purple);
+    z-index: 2;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:  black;
+}
+.right-arrow{
+    right: 1rem;
+}
+.left-arrow{
+    left: 1rem;
+}
+     
+
 
 /* products*/
 .welcome{
