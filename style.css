@@ -699,3 +699,43 @@ header{
 .tableA td {
     background-color: #e4cfe7;
 }
+
+/* form te about us */
+.formA{
+    border: 2px solid var(--purple);
+    width: 50%;
+    height: 500px;
+    padding: 30px;
+    background-color: var(--purple);
+    text-align: left;
+    margin-left: 100px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+    margin-top: 70px;
+}
+.formA h1{
+    text-align: center;
+    color: var(--darkpurple);
+    margin-bottom: 15px;
+}
+.formA label{
+    font-size: 20px;
+    color: var(--darkpurple);
+}
+
+.formA textarea{
+    width: 100%;
+    border: 1px solid rgb(222, 204, 220); 
+    margin-bottom: 10px;
+    font-size: 20px; 
+    margin-top: 10px;
+    background-color: rgb(222, 204, 220);
+}
+.formA button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--darkpurple);
+    color: white;
+    border: none;
+    margin-top: 10px;
+}

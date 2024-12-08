@@ -65,3 +65,8 @@ if(login_show){
         alert('You have a new account!');
         event.preventDefault();
     }
+    // 
+    function checkOut(){
+        alert('You have checked out that item!');
+        event.preventDefault();
+    }
