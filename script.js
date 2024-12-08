@@ -70,3 +70,31 @@ if(login_show){
         alert('You have checked out that item!');
         event.preventDefault();
     }
+
+// per canvas
+const mouseCanvas = document.getElementById("mouseEffectCanvas");
+const mouseCtx = mouseCanvas.getContext("2d");
+
+function drawEffect(x, y) {
+  mouseCtx.clearRect(0, 0, mouseCanvas.width, mouseCanvas.height);
+
+  const gradient = mouseCtx.createRadialGradient(x, y, 0, x, y, 10);
+  gradient.addColorStop(0, "#fff");
+  gradient.addColorStop(1, "#430b4c");
+
+  mouseCtx.beginPath();
+  mouseCtx.arc(x, y, 50, 0, Math.PI * 2);
+  mouseCtx.fillStyle = gradient;
+  mouseCtx.fill();
+
+  mouseCtx.font = "20px Arial"; 
+  mouseCtx.fillStyle = "black"; 
+  mouseCtx.fillText("Jewelry", x+55, y); 
+}
+
+mouseCanvas.addEventListener("mousemove", (e) => {
+  const rect = mouseCanvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  drawEffect(x, y);
+});
