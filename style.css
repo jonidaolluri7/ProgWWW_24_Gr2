@@ -7,7 +7,7 @@
 :root{
     --darkpurple :#430b4c;
     --purple : #e4a5ef;
-    --lightblue : #8ae4e1;
+    --lightblue : #d6e6ef;
     --blue: #2143ec;
 }
 
@@ -490,4 +490,59 @@ header{
     color: black;
     border-radius: 5px;
     box-shadow: 0 0 5px var(--darkpurple),  0 0 25px var(--darkpurple),  0 0 50px var(--darkpurple),  0 0 100px var(--darkpurple);
+}
+
+/* contact us */
+.mainC{
+    position: relative;
+    top: 200px;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+}
+.first{
+    border: 2px solid var(--lightblue);
+    width: 25%;
+    height: 200px;
+    padding: 30px;
+    background-color: var(--lightblue);
+    text-align: left;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+}
+.first p{
+    font-size: 25px;
+    color: var(--darkpurple);
+    margin-bottom: 15px;
+}
+.first address{
+    font-size: 20px;
+    color: var(--darkpurple);
+}
+.second{
+    border: 2px solid var(--lightblue);
+    width: 25%;
+    height: 200px;
+    padding: 30px;
+    background-color: var(--lightblue);
+    text-align: left;
+    margin-left: 300px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+
+}
+.second h1{
+    text-align: center;
+    margin-bottom: 30px; 
+    color: rgb(44, 1, 85);
+}
+.second h4, .second h5, .second h6{
+    font-weight: normal;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.second a{
+    text-decoration: none;
+    color: var(--blue);
+}
+.second a:hover{
+    color: var(--darkpurple);
 }
