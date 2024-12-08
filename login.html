@@ -5,12 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
-    <script>
-        function logIn() {
-            alert('U have been logged in!');
-            event.preventDefault();
-        }
-    </script>
+    
 </head>
 <body> 
 <header class="header">
@@ -52,11 +47,11 @@
             </div>
             <p onclick="logIn()">
                 <input type="submit" id="submit-button" name="login" value="Log in">
-
             </p>
             <p class="form-message">Not registered?<button id="register-show">Create an account</button></p>
         </form>
-        <!-- <form id="register-f" method="POST">
+        
+        <form id="register-f" method="POST">
             <div class="inputAndLabels">
                 <input type="text" placeholder="Name" id="name" name="name"/>
             </div>
@@ -72,9 +67,11 @@
             <div class="inputAndLabels">
                 <input type="password" placeholder="Confirm password" id="cpassword" name="cpassword"/>
             </div>
-            <input type="submit" id="submit-button" name="register" value="Register">
+            <p onclick="register()">
+                <input type="submit" id="submit-button" name="register" value="Register">
+            </p>
             <p class="form-message">Already registered? <button id="login-show">Sign in</button></p>
-        </form> -->
+        </form>
     </div>
 </div>
 
@@ -128,6 +125,6 @@
         </div>
     </footer>
 
-    
+    <script src="script.js"></script>
     </body>
     </html>
