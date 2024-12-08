@@ -588,3 +588,29 @@ header{
     text-align: left;
     list-style-position: inside;
 }
+.tableA{
+    margin-top: 60px;
+}
+.tableA h1{
+    text-align: center;
+    color: var(--darkpurple);
+}
+.tableA table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.tableA th, .tableA td {
+    border: 2px solid var(--darkpurple); 
+    padding: 10px; 
+    text-align: center;
+    color: var(--darkpurple);
+
+}
+.tableA th {
+    background-color: #e7baef; 
+    color: #333;
+}
+.tableA td {
+    background-color: #e4cfe7;
+}
