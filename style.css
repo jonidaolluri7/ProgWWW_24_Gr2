@@ -721,7 +721,6 @@ header{
     font-size: 20px;
     color: var(--darkpurple);
 }
-
 .formA textarea{
     width: 100%;
     border: 1px solid rgb(222, 204, 220); 
@@ -738,4 +737,16 @@ header{
     color: white;
     border: none;
     margin-top: 10px;
+}
+/* video */
+.videos{
+    display: flex;
+    margin-top: 60px;
+    text-align: center;
+}
+.videos h1{
+    margin-bottom: 20px;
+}
+.video1{
+    margin-right: 100px;
 }
