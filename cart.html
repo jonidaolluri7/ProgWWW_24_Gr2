@@ -10,6 +10,17 @@
             alert('Added to WishList!');
             event.preventDefault();
         }
+        function deleteFromCart(button) {
+            const userConfirmed = confirm('Are you sure you want to delete this item?');
+            if (userConfirmed) {
+                const item = button.parentElement; 
+                item.remove(); 
+                alert("Item deleted from cart.");
+            } else {
+                alert("Item not deleted.");
+            }
+            event.preventDefault();
+        }
     </script>
 </head>
 <body> 
@@ -62,9 +73,9 @@
         <div class="container-box">
             <form action="" method="POST" class="box">
                 <a href="viewproduct3.html"><img class="image" src="img/product3.jpg" /></a>
-                <p onclick="addToWishlist()">
-                    <button type="submit" id="addToWishlist" name="addToWishlist">
-                        <i class="fa-solid fa-heart"></i>
+                <p onclick="deleteFromCart(this)">
+                    <button type="submit" id="deleteFromCart" name="deleteFromCart">
+                        <i class="fa-solid fa-x"></i>
                     </button>
                 </p>
                 <div class="flex">
@@ -82,9 +93,9 @@
         
             <form action="" method="POST" class="box">
                 <a href="viewproduct5.html"><img class="image" src="img/product5.jpg" /></a>
-                <p onclick="addToWishlist()">
-                    <button type="submit" id="addToWishlist" name="addToWishlist">
-                        <i class="fa-solid fa-heart"></i>
+                <p onclick="deleteFromCart(this)">
+                    <button type="submit" id="deleteFromCart" name="deleteFromCart">
+                        <i class="fa-solid fa-x"></i>
                     </button>
                 </p>
                 <div class="flex">

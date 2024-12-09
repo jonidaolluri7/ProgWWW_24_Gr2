@@ -94,7 +94,6 @@ if(login_show){
     });
 
 
- 
 
     // 
     function checkOut(){
