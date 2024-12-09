@@ -913,9 +913,16 @@ header{
     background-size: 200% 100%;
     background-position: top left;
     background-repeat: no-repeat;
+    font-size: 20px;
 }
 .video1{
-    margin-right: 100px;
+    margin-right: 80px;
+}
+.audioss{
+    margin-left: 80px;
+}
+.audioss ul{
+    list-style-type:none;
 }
 /* per canvas */
 .canvasE{

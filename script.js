@@ -150,3 +150,27 @@ const canvas = document.getElementById('jewelryCanvas');
   img.onload = function () {
     ctx.drawImage(img, 120, 120, 100, 100);
   };
+
+
+// per audios qe te jene one at a time
+const audios = document.querySelectorAll('audio');
+audios.forEach(audio => {
+  audio.addEventListener('play', () => {
+    audios.forEach(otherAudio => {
+      if (otherAudio !== audio) {
+        otherAudio.pause();
+      }
+    });
+  });
+});
+// per videos qe te jene one at a time
+const videos = document.querySelectorAll('video');
+videos.forEach(video => {
+  video.addEventListener('play', () => {
+    videos.forEach(otherVideo => {
+      if (otherVideo !== video) {
+        otherVideo.pause();
+      }
+    });
+  });
+});
