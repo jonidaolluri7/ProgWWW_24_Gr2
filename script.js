@@ -58,6 +58,7 @@ if(login_show){
     /* login/register methods */
     function logIn() {
         alert('You have been logged in!');
+        window.location.replace('profile.html');
         event.preventDefault();
     }
 

@@ -956,3 +956,70 @@ header{
     color: white;
     padding-top: 20px;
 }
+
+
+
+/* profile page */
+.profile-page{
+    position: relative;
+    top: 180px;
+    width: 80vw;
+    height: 40vw;
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  
+/* profile page */
+.profile-page{
+    position: relative;
+    top: 160px;
+    width: 80vw;
+    height: 40%;
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+
+  .profile-page .welcome h1{
+    padding-top: 35px;
+    text-transform: capitalize;
+  }
+   
+  .profile-page section{
+    display: flex;
+    width: 100%;
+    height: 534px;
+    padding: 5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .profile-page .form{
+    margin: auto;
+  }
+
+  .profile-page .container{
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 0;
+  }
+
+  .profile-page .container div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('img/200.jpg');
+    background-size:cover;
+    margin: 30px 0;
+    padding: 80px;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+  }
+  .profile-page .container i{
+   font-size:40px ;
+   color: var(--darkpink);
+  } 
