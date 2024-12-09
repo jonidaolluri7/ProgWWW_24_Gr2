@@ -31,7 +31,12 @@ body{
     margin: 0 auto;
 }
 
-
+/* font i ri */
+@font-face {
+    font-family: 'NewFont';
+    src: url('fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype'),
+     url('fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+}
 /* header */
 header{
     position: fixed;
@@ -326,6 +331,7 @@ header{
   .welcome p{
     margin-top: 1rem;
     width: 50rem;
+    word-wrap: break-word;
   }
   .welcome img{
     margin-top: 5px;
@@ -705,6 +711,7 @@ header{
     margin-top: 60px;
     border-spacing: 10px;
     table-layout: fixed;
+    font-family: 'NewFont', sans-serif;
 }
 .tableA caption{
     text-align: center;
@@ -727,7 +734,11 @@ header{
 }
 .tableA th {
     background-color: #e7baef; 
-    color: #333;
+    color: white;
+    background: radial-gradient(ellipse farthest-corner, #430b4c, #e0b6e6, #310137);
+    background-size: 200% 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
 }
 .tableA td {
     background-color: #e4cfe7;
@@ -786,12 +797,18 @@ header{
     background-color: var(--purple);
     margin-bottom: 20px;
     font-style: italic;
-    color: var(--darkpurple);
+    color: white;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-wrap: normal;
+    font-family: 'NewFont', sans-serif;
+    background: linear-gradient(to right, #430b4c, #e0b6e6);
+    background-size: 200% 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
 }
 .video1{
     margin-right: 100px;
@@ -804,8 +821,34 @@ header{
     text-align: center;
     margin-top: 60px;
     box-shadow: 20px 20px 25px var(--darkpurple); 
+    border: 15px solid transparent;
+    background-origin: padding-box;
+    border-image: url('img/image.png') 30 round;
 }
 .canvasE h1{
     color: var(--darkpurple);
+    padding-top: 20px;
+    background: linear-gradient(45deg, #430b4c, #e0b6e6, #310137);
+
+}
+.articleA{
+    margin-top: 60px;
+    width: 40%;
+    height: 300px; 
+    background-image: url('img/1.jpg'), url('img/2.jpg'), url('img/3.jpg'), url('img/4.png');
+    background-position: top left, top right, bottom left, bottom right; 
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; 
+    background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%; 
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 70px;
+}
+.articleA h1, .articleA p{
+    color: white;
     padding-top: 20px;
 }
