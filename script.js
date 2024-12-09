@@ -129,3 +129,24 @@ mouseCanvas.addEventListener("mousemove", (e) => {
   const y = e.clientY - rect.top;
   drawEffect(x, y);
 });
+//gradienti linear
+const canvas = document.getElementById('jewelryCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const gradient = ctx.createLinearGradient(0, 0, 400, 0);
+  gradient.addColorStop(0, '#fff');
+  gradient.addColorStop(1, '#430b4c');
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, 500, 300);
+
+  ctx.beginPath();
+  ctx.arc(150, 150, 100, 0, Math.PI * 2, false); 
+  ctx.fillStyle = 'white';
+  ctx.fill();
+
+  const img = new Image();
+  img.src = 'img/diamond.jpg'; 
+  img.onload = function () {
+    ctx.drawImage(img, 120, 120, 100, 100);
+  };

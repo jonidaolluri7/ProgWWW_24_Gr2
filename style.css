@@ -956,8 +956,30 @@ header{
     color: white;
     padding-top: 20px;
 }
-
-
+.canvasE2{
+    width: 32.5%;
+    height: 300px;
+    background-color: var(--purple);
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+    border: 15px solid transparent;
+    background-origin: padding-box;
+    border-image: url('img/image.png') 30 round;
+}
+.svg{
+    width: 32.5%;
+    height: 300px;
+    background-color: var(--purple);
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 150px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+    border: 15px solid transparent;
+    background-origin: padding-box;
+    border-image: url('img/image.png') 30 round;
+    padding: 10px;
+}
 
 /* profile page */
 .profile-page{
