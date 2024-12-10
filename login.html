@@ -47,7 +47,7 @@
     <div class="form">
         <form id="login-f" method="POST">
             <div class="inputAndLabels">
-                <input type="email" placeholder="Email" id="lemail" name="lemail">
+                <input type="email" autocomplete="on" placeholder="Email" id="lemail" name="lemail" autofocus>
             </div>
             <div class="inputAndLabels">
                 <input type="password" placeholder="Password" id="lpassword" name="lpassword">
@@ -69,6 +69,9 @@
             </div>
             <div class="inputAndLabels">
                 <input type="email" placeholder="Email" id="email" name="email"/>
+            </div>
+            <div class="inputAndLabels">
+                <input type="tel" placeholder="Phone number" id="tel" name="tel" pattern="[0-9]{10}"/>
             </div>
             <div class="inputAndLabels">
                 <input type="password" placeholder="Password" id="password" name="password"/>
