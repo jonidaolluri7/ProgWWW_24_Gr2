@@ -5,7 +5,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
-    
+    <style>
+        #currentDate {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function showCurrentDate() {
+            const currentDateOutput = document.getElementById("currentDate");
+            const now = new Date();
+            const formattedDate = now.toLocaleString("en-US", {
+                dateStyle: "medium",
+                timeStyle: "short"
+            });
+            currentDateOutput.value = "Today's date: " + formattedDate;
+        }
+        document.addEventListener("DOMContentLoaded", showCurrentDate);
+    </script>
 </head>
 <body> 
 <header class="header">
@@ -47,6 +64,8 @@
             <div class="inputAndLabels">
                 <input type="password" placeholder="Password" id="lpassword" name="lpassword">
             </div>
+            <output id="currentDate"></output>
+
             <p onclick="logIn()">
                 <input type="submit" id="submit-button" name="login" value="Log in">
             </p>

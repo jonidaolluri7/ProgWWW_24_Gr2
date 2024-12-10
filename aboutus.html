@@ -144,7 +144,18 @@
                 
                 <input type="checkbox" id="watches" name="jewelry" value="Watches">
                 <label for="watches">Watches</label><br><br>
-  
+
+                <label for="jewelryType">Choose which jewelry you wear the most:</label>
+                <input style="padding: 10px; background-color: rgb(222, 204, 220); border: 1px solid rgb(222, 204, 220); " list="jewelryOptions" id="jewelryType" name="jewelryType" placeholder="Select or type"> 
+                <datalist id="jewelryOptions">
+                    <option value="Ring"></option>
+                    <option value="Necklace"></option>
+                    <option value="Earrings"></option>
+                    <option value="Bracelet"></option>
+                </datalist><br><br>
+                <label for="securityKey">Generate Security Key:</label>
+                <keygen id="securityKey" name="keygen"><br><br>
+                    
                 <label for="message">Your feedback</label><br>
                 <textarea id="message" name="message" placeholder="Tell us more..." rows="5" cols="40" ></textarea><br>
                 
