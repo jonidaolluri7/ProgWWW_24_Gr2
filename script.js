@@ -174,3 +174,28 @@ videos.forEach(video => {
     });
   });
 });
+
+
+
+/* display future products */
+function displayProducts() {
+  let products = [
+  { name: "Diamond Ring", price: 34 },
+  { name: "Gold Necklace", price: 30 },
+  { name: "Silver Bracelet", price: 56 },
+  { name: "Pearl Earrings", price: 12 },
+  { name: "Sapphire Ring", price: 45 },
+  { name: "Emerald Necklace", price: 40 },
+  { name: "Ruby Bracelet", price: 70 },
+  { name: "Topaz Earrings", price: 22 },
+];
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = ""; 
+
+  for (let i = 0; i < products.length; i++) {
+      const listItem = document.createElement("li");
+      listItem.className = "product-item";
+      listItem.textContent = `${products[i].name} - $${products[i].price}`;
+      productList.appendChild(listItem);
+  }
+}

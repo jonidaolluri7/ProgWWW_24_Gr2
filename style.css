@@ -416,6 +416,39 @@ header{
     margin-bottom: 2rem;
 }
 
+/* future products */
+#future-products{
+    padding: 3rem 15rem;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--purple);
+}
+#future-products h2{
+    margin-bottom: 2rem;
+}
+#future-products #product-list{
+    padding: 1rem;
+    list-style: none; 
+    padding: 0;
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+#future-products #product-list li{
+    background: linear-gradient(135deg, #ffe4e1, #efc1d4); 
+    border: 2px solid #ffb6c1; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    font-size: 1.2rem; 
+    color:#ff69b4; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center; 
+}
 
 /* products*/
 .welcome{
