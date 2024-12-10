@@ -1049,3 +1049,36 @@ header{
    font-size:40px ;
    color: var(--darkpink);
   } 
+
+
+  /* cart drag and drop */ 
+  #cart-drop{
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;        
+    align-items: center;
+  }
+
+  #getData{
+    width: 600px;
+    height: 500px;
+    padding: 10px;
+    background-image: url('img/500.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative; 
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+  }
+
+  #dragData{
+    width:200px; 
+    height:200px;
+  }
+
+  #dropText{
+    color: var(--darkpurple);
+    border-bottom: 3px solid var(--darkpurple);
+  }

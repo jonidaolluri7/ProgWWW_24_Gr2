@@ -80,6 +80,18 @@
                 <input type="submit" id="submit-button" name="edit" value="Edit">
             </form>
         </div>
+        <h3>Drag the GeekforGeeks image into the rectangle:</h3>
+        <div id="getData" 
+             ondrop="drop(event)" 
+             ondragover="allowDrop(event)">
+          </div>
+        <br> 
+        <img id="dragData" 
+             src="img/400.png" 
+             draggable="true" 
+             ondragstart="drag(event)" 
+             width="250" 
+             height="200"> 
     </section>
 </div>
 

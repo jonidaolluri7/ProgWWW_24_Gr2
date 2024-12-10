@@ -112,6 +112,28 @@
             </form>
         </div>
     </section>
+    <h3 id="dropText">Drag the ring into the cart:</h3>
+
+    <aside id="cart-drop">
+        <div id="getData" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>         
+        <img id="dragData" draggable="true" ondragstart="drag(event)" src="img/400.png"> 
+    </aside>
+    <script>
+       function allowDrop(e) {
+          e.preventDefault();
+      }
+
+      function drag(e) {
+          e.dataTransfer.setData("text", e.target.id);
+      }
+
+      function drop(e) {
+          e.preventDefault();
+          var data = e.dataTransfer.getData("text");
+          e.target.appendChild(document.getElementById(data));
+      }
+    </script>
 </div>
     <footer class="footer">
         <div class="container">
