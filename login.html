@@ -11,18 +11,6 @@
             color: #333;
         }
     </style>
-    <script>
-        function showCurrentDate() {
-            const currentDateOutput = document.getElementById("currentDate");
-            const now = new Date();
-            const formattedDate = now.toLocaleString("en-US", {
-                dateStyle: "medium",
-                timeStyle: "short"
-            });
-            currentDateOutput.value = "Today's date: " + formattedDate;
-        }
-        document.addEventListener("DOMContentLoaded", showCurrentDate);
-    </script>
 </head>
 <body> 
 <header class="header">
@@ -145,6 +133,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        function showCurrentDate() {
+            const currentDateOutput = document.getElementById("currentDate");
+            const now = new Date();
+            const formattedDate = now.toLocaleString("en-US", {
+                dateStyle: "medium",
+                timeStyle: "short"
+            });
+            currentDateOutput.value = "Today's date: " + formattedDate;
+        }
+        document.addEventListener("DOMContentLoaded", showCurrentDate);
+    </script>
 
     <script src="script.js"></script>
     </body>
