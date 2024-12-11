@@ -337,7 +337,7 @@ $(document).ready(function() {
 
   });
 });
-//slide and animate
+//slide and animate and callback
 $(document).ready(function(){
   $("#clickText1").click(function(){
     $("#shownText1").slideUp("slow");
@@ -353,5 +353,11 @@ $(document).ready(function(){
     var div = $("#animateDiv");  
     div.animate({left: '100px'}, "slow");
     div.animate({fontSize: '3em'}, "slow");
+  });
+
+  $("#buttonCallback").click(function(){
+    $("#textCallback").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
   });
 });

@@ -1140,7 +1140,7 @@ header{
     height: 300px;
     background-color: var(--purple);
 }
-.animate button{
+.animate button, .callback button{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -1155,6 +1155,19 @@ header{
     width:150px;
     color: var(--lightblue);
     position:absolute;
+}
+.callback{
+    margin-top: 30px;
+    width: 340px;
+    height: 300px;
+    background-color: var(--purple);
+    margin-left: 55px;
+}
+.callback p{
+    font-size: 18px;
+    color: var(--darkpurple);
+    text-align: center;
+    padding: 10px;
 }
 /* profile page */
 .profile-page{
