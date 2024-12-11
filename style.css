@@ -1134,7 +1134,7 @@ header{
     width: 81%;
     background-color: var(--purple);
 }
-.animate{
+.animate,.igRegEx{
     margin-top: 30px;
     width: 340px;
     height: 300px;
@@ -1174,6 +1174,13 @@ header{
     color: var(--darkpurple);
     text-align: center;
     padding: 10px;
+}
+.igRegEx p{
+    font-size: 18px;
+    color: var(--darkpurple);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 /* profile page */
 .profile-page{

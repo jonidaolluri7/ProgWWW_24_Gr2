@@ -411,3 +411,20 @@ if (numbers) {
 } else {
   document.getElementById("result6").textContent = "No numbers found.";
 }
+
+//i,g regex
+const teksti = document.getElementById("tekstiRegEx").textContent;
+const words2 = teksti.match(/amet/gi); //case insensitive
+document.getElementById("iRegEx").textContent = "Found the word 'amet' " + words2.length + " times.";
+const words = teksti.match(/amet/g); //case sensitive
+document.getElementById("gRegEx").textContent = "Found the word 'amet' " + words.length + " times.";
+//text
+const pattern = /amet/;
+const result = pattern.test(teksti);
+document.getElementById("testRegEx").textContent = "The paragraph contains the word amet? - " + result;
+//exec
+const result2 = pattern.exec(teksti);
+document.getElementById("execRegEx").textContent = "The word amet is found at position " + result2.index;
+
+
+
