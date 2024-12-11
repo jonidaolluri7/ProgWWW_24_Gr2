@@ -1083,7 +1083,78 @@ header{
     color: #333;
     margin: auto 30px;
 }
-
+.fadeEffect{
+    width: 40%;
+    height: 300px;
+    background-color: var(--purple);
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+    border-width: 3px;
+    border-style: inset;
+    border-color: var(--darkpurple);
+    margin-left: 50px;
+}
+.fadeEffect button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 40px;
+    background-color: var(--darkpurple);
+    color: var(--lightblue);
+}
+.fadeEffect p{
+    font-size: 18px;
+    color: var(--darkpurple);
+    margin: auto 30px;
+    background-color: #eecdf4;
+    padding: 10px;
+}
+.slideUp, .slideDown,.slideToggle{
+    width: 30%;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+#clickText1, #clickText2, #clickText3 {
+    padding: 5px;
+    margin-right: 30px;
+    text-align: center;
+    background-color: var(--purple);
+    border: solid 1px #c3c3c3;
+}
+#shownText2, #shownText3 {
+    padding: 20px;
+    display: none;
+    width: 81%;
+    background-color: var(--purple);
+}
+#shownText1{
+    padding: 20px;
+    width: 81%;
+    background-color: var(--purple);
+}
+.animate{
+    margin-top: 30px;
+    width: 340px;
+    height: 300px;
+    background-color: var(--purple);
+}
+.animate button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 40px;
+    background-color: var(--darkpurple);
+    color: var(--lightblue);
+}
+.animate div{
+    background:var(--darkpurple);
+    height:100px;
+    margin-left: 10px;
+    width:150px;
+    color: var(--lightblue);
+    position:absolute;
+}
 /* profile page */
 .profile-page{
     position: relative;

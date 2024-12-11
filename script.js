@@ -305,6 +305,7 @@ $(document).ready(function() {
   
 });
 
+//hide show 
 $(document).ready(function() {
   $('#showButton').click(function() {
       $('#textToShow').show(); 
@@ -312,5 +313,37 @@ $(document).ready(function() {
 
   $('#hideButton').click(function() {
       $('#textToShow').hide();
+  });
+});
+//fade in fade out  
+$(document).ready(function() {
+  $('#buttonFadeIn').click(function() {
+      $('#textFadeIn').fadeIn("slow"); 
+      $("#textFadeTo").fadeTo("slow", 0.15);
+
+  });
+
+  $('#buttonFadeOut').click(function() {
+      $('#textFadeOut').fadeOut();
+      $("#textFadeToggle").fadeToggle(3000);
+
+  });
+});
+//slide and animate
+$(document).ready(function(){
+  $("#clickText1").click(function(){
+    $("#shownText1").slideUp("slow");
+  });
+  $("#clickText2").click(function(){
+    $("#shownText2").slideDown("slow");
+  });
+  $("#clickText3").click(function(){
+    $("#shownText3").slideToggle("slow");
+  });
+
+  $("#animateButton").click(function(){
+    var div = $("#animateDiv");  
+    div.animate({left: '100px'}, "slow");
+    div.animate({fontSize: '3em'}, "slow");
   });
 });
