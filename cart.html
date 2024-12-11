@@ -112,22 +112,23 @@
 
     <aside id="cart-drop">
         <div id="getData" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <br>         
-        <img id="dragData" draggable="true" ondragstart="drag(event)" src="img/400.png"> 
+        <div id="original-container" ondragover="allowDrop(event)" ondrop="drop(event)">     
+            <img id="dragData" draggable="true" ondragstart="drag(event)" src="img/400.png"> 
+        </div>
     </aside>
     <script>
-       function allowDrop(e) {
-          e.preventDefault();
+       function allowDrop(ev) {
+          ev.preventDefault();
       }
 
-      function drag(e) {
-          e.dataTransfer.setData("text", e.target.id);
+      function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
       }
 
-      function drop(e) {
-          e.preventDefault();
-          var data = e.dataTransfer.getData("text");
-          e.target.appendChild(document.getElementById(data));
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
       }
     </script>
 </div>
