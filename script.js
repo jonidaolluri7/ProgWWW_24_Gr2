@@ -32,7 +32,7 @@ if(slider){
         toRight();
     }
 }
-
+/** --------------------------------------------------------------------------------------------------------------- */
 
 /* display future products */ //edhe per web worker me llogarit qmimin total te ketyre produkteve
 let products = [
@@ -63,6 +63,7 @@ function displayProducts() {
   const calculateTotalBtn = document.getElementById("calculate-total-btn");
     calculateTotalBtn.style.display = "inline-block";
 }
+
 function calculateTotal() {
   worker.postMessage(products); 
 
@@ -72,6 +73,7 @@ function calculateTotal() {
   };
 }
 
+/** --------------------------------------------------------------------------------------------------------------- */
 /* login to registration */
 
   let register_show = document.getElementById("register-show");
@@ -94,39 +96,111 @@ function calculateTotal() {
       }
 
     /* login/register methods */
+    //log in as user
     function logInUser() {
-        alert('You have been logged in!');
-        window.location.replace('profile.html');
-        event.preventDefault();
+      
+      alert('You have been logged in!');
+      window.location.replace('profile.html');
+      event.preventDefault();
     }
 
+    //log in as admin
     function logInAdmin() { 
       alert('You have been logged in!');
       window.location.replace('admin.html');
       event.preventDefault();
-  }
-
-    function register(){
-        alert('You have a new account!');
-        event.preventDefault();
     }
 
+    //register validation
+    function register(){
+
+      const name = document.getElementById("name").value;
+      const lastname = document.getElementById("lastname").value;
+      const email = document.getElementById("email").value;
+      const tel = document.getElementById("tel").value;
+      const password = document.getElementById("password").value;
+      
+      try{
+        validateName(name);
+        validateLastname(lastname);
+        validateEmail(email);
+        validatePhoneNumber(tel);
+        validatePassword(password);
+        alert('You have a new account!');
+        event.preventDefault();
+      } 
+      
+      catch(error){
+        console.error(error.message);
+        alert("Failed to register: " + (error));
+      }
+
+    }
+
+    //login validation
+    //admin and user login
     const users = { email: "admin@gmail.com", password: "123"};
     const loginForm = document.getElementById("login-f");
     if(loginForm){
         loginForm.addEventListener("submit", function(event) {
+          
           event.preventDefault();
           const email = document.getElementById("lemail").value;
           const password = document.getElementById("lpassword").value;
-          if(email === users.email && password === users.password){
-            logInAdmin();
-          } else {
-            logInUser();
+          
+          try{
+            validateEmail(email);
+            validatePassword(password);
+            if(email === users.email && password === users.password){
+              logInAdmin();
+            } 
+            else {
+              logInUser();
+            }
           }
+          
+          catch(error){
+            console.error(error.message);
+            alert("Failed to log in: " + (error.message || error));
+          }
+
         });
     }
 
+    //validation functions
+    function validateEmail(email) {
+      if (!email) throw "Email cannot be empty.";
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) throw "Invalid email format.";
+    }
 
+    function validatePassword(password) {
+      if (!password) throw "Password cannot be empty.";
+      if (password.length < 6) throw "Password must be at least 6 characters long.";
+      if (!/[A-Z]/.test(password)) throw "Password must contain at least one uppercase letter.";
+      if (!/[a-z]/.test(password)) throw "Password must contain at least one lowercase letter.";
+      if (!/[0-9]/.test(password)) throw "Password must contain at least one number.";
+      if (!/[!@#$%^&*]/.test(password)) throw "Password must contain at least one special character.";
+    }
+
+    function validateName(name) {
+      if (!name) throw "Name cannot be empty.";
+      if (name.length < 2) throw "Name must be at least 2 characters long.";
+      if (!/^[A-Za-z\s]+$/.test(name)) throw "Name can only contain letters and spaces.";
+    }
+
+    function validateLastname(lastname) {
+      if (!lastname) throw "Last name cannot be empty.";
+      if (lastname.length < 2) throw "Last name must be at least 2 characters long.";
+      if (!/^[A-Za-z\s]+$/.test(lastname)) throw "Last name can only contain letters and spaces.";
+    }
+
+    function validatePhoneNumber(phoneNumber) {
+      if (!phoneNumber) throw "Phone number cannot be empty.";
+      if (!/^\d{10}$/.test(phoneNumber)) throw "Phone number must be exactly 10 digits.";
+    }
+
+    /** --------------------------------------------------------------------------------------------------------------- */
     /* add product / local/global variable/objects */
     const addProductForm = document.getElementById("add-product-form");
     if(addProductForm){
@@ -143,7 +217,7 @@ function calculateTotal() {
 
     function addNewProduct(productName, productPrice) {
       try {
-          if (!productName || isNaN(productPrice)) {
+          if (!productName || !productPrice || isNaN(productPrice)) {
               throw new Error("Invalid product name or price");
           }
           const newProduct = { 
@@ -163,6 +237,9 @@ function calculateTotal() {
       }
   }
 
+  /** --------------------------------------------------------------------------------------------------------------- */
+
+
     /* greeting */
     const greeting = document.getElementById("greeting");
     if(greeting){
@@ -178,7 +255,7 @@ function calculateTotal() {
     }
     
 
-
+  /** --------------------------------------------------------------------------------------------------------------- */
     
     /* event */
     const items = document.querySelectorAll("header .fa-solid");
@@ -190,6 +267,8 @@ function calculateTotal() {
         item.classList.remove("highlight");
         });
     });
+
+    /** --------------------------------------------------------------------------------------------------------------- */
 
     /* add to wishlist */
     function addToWishlist() {
@@ -203,12 +282,78 @@ function calculateTotal() {
         event.preventDefault();
     }
 
-    // 
+    /* checkout */
     function checkOut(){
         alert('You have checked out that item!');
         event.preventDefault();
     }
 
+    /** --------------------------------------------------------------------------------------------------------------- */
+    //validimi ne about us per form
+    
+    const aboutUsForm = document.getElementById("about-us-form");
+    if(aboutUsForm){
+
+      aboutUsForm.addEventListener("submit", (event) => {
+
+        event.preventDefault(); 
+        const jewelryType = document.getElementById("jewelryType").value;
+        const jewelryOptionsDatalist = document.getElementById("jewelryOptions");
+        const checkboxes = document.querySelectorAll('input[name="jewelry"]:checked');
+        const nrProductsNumber = document.getElementById("nrProducts").value;
+        const files = document.getElementById("files").value;
+        const message = document.getElementById("message").value;
+        
+        try {
+          validateDatalist(jewelryType, jewelryOptionsDatalist);
+          validateCheckList(checkboxes);
+          validateNumber(nrProductsNumber);
+          validateFile(files);
+          validateMessage(message);
+          alert("Message sent successfully!");
+        } 
+        
+        catch (error) {
+          console.error(error);
+          alert("Failed to send message: " + error);
+        }
+
+      });
+
+    }
+
+    // about us validation functions
+
+    function validateDatalist(value, datalist) {
+      const options = Array.from(datalist.options).map(option => option.value);
+      if (!options.includes(value)) throw new Error("Invalid selection. Choose from the list.");
+    }
+
+    function validateCheckList(checkboxes){
+      if (checkboxes.length === 0) {
+        throw new Error("Please select at least one type of jewelry.");
+      }
+    }
+
+    function validateNumber(nrProductsNumber){
+      if (!nrProductsNumber || nrProductsNumber < 1 || nrProductsNumber > 100) {
+        throw new Error("Please select a number between 1 and 100 for the number of products.");
+      }
+    }
+
+    function validateFile(files){
+      if (!files.length) {
+        throw new Error("Please select at least one file.");
+      }
+    }
+
+    function validateMessage(message){
+      if (!message) {
+        throw new Error("Please enter a message.");
+      }
+    }
+
+    /** --------------------------------------------------------------------------------------------------------------- */
   // per canvas
   const mouseCanvas = document.getElementById("mouseEffectCanvas");
   const mouseCtx = mouseCanvas.getContext("2d");
@@ -236,6 +381,7 @@ function calculateTotal() {
     const y = e.clientY - rect.top;
     drawEffect(x, y);
   });
+  
   //gradienti linear
   const canvas = document.getElementById('jewelryCanvas');
     const ctx = canvas.getContext('2d');
