@@ -1187,7 +1187,7 @@ header{
 }
 .mathConstFunc {
     margin-top: 30px;
-    width: 380px;
+    width: 400px;
     height: 300px;
     background-color: var(--purple);
     margin-left: 55px;
@@ -1196,13 +1196,13 @@ header{
     border-color: var(--darkpurple);
 }
 .mathConstFunc h1{
-    font-size: 18px;
+    font-size: 15px;
     color: var(--darkpurple);
     text-align: center;
     padding: 10px;
 }
 .mathConstFunc p{
-    font-size: 15px;
+    font-size: 14px;
     color: var(--darkpurple);
     text-align: left;
     padding: 10px;

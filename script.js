@@ -399,3 +399,15 @@ const roundedValue = Math.round(randomValue);
 const floorValue = Math.floor(randomValue);
 document.getElementById("result5").textContent = "Random value: "+randomValue+", rounded value: "+roundedValue+", floor value: "+floorValue;
 
+//replace and match
+let tekstii = document.getElementById("replace").textContent;
+tekstii = tekstii.replace(/amet/g, "!!!!!");
+document.getElementById("replace").textContent = tekstii;
+
+const teksti2 = document.getElementById("randomDate").textContent;
+const numbers = teksti2.match(/\d+/g); //find all the numbers
+if (numbers) {
+  document.getElementById("result6").textContent = "Numbers found: " + numbers.join(', ');
+} else {
+  document.getElementById("result6").textContent = "No numbers found.";
+}
