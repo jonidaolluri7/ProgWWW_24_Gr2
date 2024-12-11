@@ -45,46 +45,20 @@
 
 <div class="login-page">
     <div class="form">
-        <form id="login-f" method="POST">
+        <form id="add-product-form" method="POST">
+            <legend>Add a new product</legend>
             <div class="inputAndLabels">
-                <input type="email" autocomplete="on" placeholder="Email" id="lemail" name="lemail" autofocus>
+                <input type="text" placeholder="Name" id="product-name" name="product-name"/>
             </div>
             <div class="inputAndLabels">
-                <input type="password" placeholder="Password" id="lpassword" name="lpassword">
+                <input type="number" placeholder="Price" id="product-price" name="product-price">
             </div>
-            <output id="currentDate"></output>
-
             <p>
-                <input type="submit" id="submit-button" name="login" value="Log in">
+                <input type="submit" id="submit-button" name="add" value="Add product">
             </p>
-            <p class="form-message">Not registered?<button id="register-show">Create an account</button></p>
-        </form>
-        
-        <form id="register-f" method="POST">
-            <div class="inputAndLabels">
-                <input type="text" placeholder="Name" id="name" name="name"/>
-            </div>
-            <div class="inputAndLabels">
-                <input type="text" placeholder="Lastname" id="lastname" name="lastname"/>
-            </div>
-            <div class="inputAndLabels">
-                <input type="email" placeholder="Email" id="email" name="email"/>
-            </div>
-            <div class="inputAndLabels">
-                <input type="tel" placeholder="Phone number" id="tel" name="tel" pattern="[0-9]{10}"/>
-            </div>
-            <div class="inputAndLabels">
-                <input type="password" placeholder="Password" id="password" name="password"/>
-            </div>
-            <div class="inputAndLabels">
-                <input type="password" placeholder="Confirm password" id="cpassword" name="cpassword"/>
-            </div>
-            <p onclick="register()">
-                <input type="submit" id="submit-button" name="register" value="Register">
-            </p>
-            <p class="form-message">Already registered? <button id="login-show">Sign in</button></p>
         </form>
     </div>
+    <ul id="display"></ul>
 </div>
 
     <footer class="footer">

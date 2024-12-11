@@ -34,39 +34,109 @@ if(slider){
 }
 
 
+/* display future products */
+let products = [
+  { name: "Diamond Ring", price: 34 },
+  { name: "Gold Necklace", price: 30 },
+  { name: "Silver Bracelet", price: 56 },
+  { name: "Pearl Earrings", price: 12 },
+  { name: "Sapphire Ring", price: 45 },
+  { name: "Emerald Necklace", price: 40 },
+  { name: "Ruby Bracelet", price: 70 },
+  { name: "Topaz Earrings", price: 22 },
+];
+function displayProducts() {
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = ""; 
+
+  for (let i = 0; i < products.length; i++) {
+      const listItem = document.createElement("li");
+      listItem.className = "product-item";
+      listItem.textContent = `${products[i].name} - $${products[i].price}`;
+      productList.appendChild(listItem);
+  }
+}
+
 /* login to registration */
 
-let register_show = document.getElementById("register-show");
-console.log(register_show);
+  let register_show = document.getElementById("register-show");
+  console.log(register_show);
 
-if(register_show){
-    register_show.onclick= function() {
-        event.preventDefault(); // Prevent the default behavior of the button click
-        document.getElementById("login-f").style.display='none';
-        document.getElementById("register-f").style.display='block';
-    }
-}
-let login_show = document.getElementById("login-show");
-if(login_show){
-    login_show.onclick= function() {
-        event.preventDefault(); // Prevent the default behavior of the button click
-        document.getElementById("register-f").style.display='none';
-        document.getElementById("login-f").style.display='block';
-    }
-    }
+  if(register_show){
+      register_show.onclick= function() {
+          event.preventDefault(); // Prevent the default behavior of the button click
+          document.getElementById("login-f").style.display='none';
+          document.getElementById("register-f").style.display='block';
+      }
+  }
+  let login_show = document.getElementById("login-show");
+  if(login_show){
+      login_show.onclick= function() {
+          event.preventDefault(); // Prevent the default behavior of the button click
+          document.getElementById("register-f").style.display='none';
+          document.getElementById("login-f").style.display='block';
+      }
+      }
 
     /* login/register methods */
-    function logIn() {
+    function logInUser() {
         alert('You have been logged in!');
         window.location.replace('profile.html');
         event.preventDefault();
     }
+
+    function logInAdmin() {
+      alert('You have been logged in!');
+      window.location.replace('admin.html');
+      event.preventDefault();
+  }
 
     function register(){
         alert('You have a new account!');
         event.preventDefault();
     }
 
+    const users = { email: "admin@gmail.com", password: "123"};
+    const loginForm = document.getElementById("login-f");
+    if(loginForm){
+        loginForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+          const email = document.getElementById("lemail").value;
+          const password = document.getElementById("lpassword").value;
+          if(email === users.email && password === users.password){
+            logInAdmin();
+          } else {
+            logInUser();
+          }
+        });
+    }
+
+
+    /* add product / local/global variable/objects */
+    const addProductForm = document.getElementById("add-product-form");
+    if(addProductForm){
+
+          addProductForm.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+            // variablave lokale
+            const productName = document.getElementById("product-name").value;
+            const productPrice = document.getElementById("product-price").value;
+
+            // Krijo një objekt të ri
+            const newProduct = {
+                name: productName,
+                price: parseFloat(productPrice)
+            };
+            //variabla gloobale products
+            products.push(newProduct);
+            for(let i=0; i<products.length; i++){
+                console.log(products[i].name);
+                document.getElementById("display").innerHTML += "<li>"+products[i].name+" - $"+products[i].price+"</li>";  
+
+            }
+
+      });
+    }
 
     /* greeting */
 
@@ -74,6 +144,7 @@ if(login_show){
         const greeting = document.getElementById("greeting");
         const now = new Date();
         const hours = now.getHours();
+        console.log(hours);
         const time = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
         greeting.innerHTML = time + " Welcome to our jewelry collection.";
     }
@@ -176,26 +247,3 @@ videos.forEach(video => {
 });
 
 
-
-/* display future products */
-function displayProducts() {
-  let products = [
-  { name: "Diamond Ring", price: 34 },
-  { name: "Gold Necklace", price: 30 },
-  { name: "Silver Bracelet", price: 56 },
-  { name: "Pearl Earrings", price: 12 },
-  { name: "Sapphire Ring", price: 45 },
-  { name: "Emerald Necklace", price: 40 },
-  { name: "Ruby Bracelet", price: 70 },
-  { name: "Topaz Earrings", price: 22 },
-];
-  const productList = document.getElementById("product-list");
-  productList.innerHTML = ""; 
-
-  for (let i = 0; i < products.length; i++) {
-      const listItem = document.createElement("li");
-      listItem.className = "product-item";
-      listItem.textContent = `${products[i].name} - $${products[i].price}`;
-      productList.appendChild(listItem);
-  }
-}

@@ -428,7 +428,7 @@ header{
 #future-products h2{
     margin-bottom: 2rem;
 }
-#future-products #product-list{
+#future-products #product-list, #display{
     padding: 1rem;
     list-style: none; 
     padding: 0;
@@ -437,7 +437,7 @@ header{
     gap: 10px; 
 }
 
-#future-products #product-list li{
+#future-products #product-list li, #display li{
     background: linear-gradient(135deg, #ffe4e1, #efc1d4); 
     border: 2px solid #ffb6c1; 
     border-radius: 15px; 
