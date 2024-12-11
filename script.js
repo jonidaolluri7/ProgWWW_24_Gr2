@@ -32,7 +32,7 @@ if(slider){
         toRight();
     }
 }
-
+/** --------------------------------------------------------------------------------------------------------------- */
 
 /* display future products */ //edhe per web worker me llogarit qmimin total te ketyre produkteve
 let products = [
@@ -63,6 +63,7 @@ function displayProducts() {
   const calculateTotalBtn = document.getElementById("calculate-total-btn");
     calculateTotalBtn.style.display = "inline-block";
 }
+
 function calculateTotal() {
   worker.postMessage(products); 
 
@@ -72,6 +73,7 @@ function calculateTotal() {
   };
 }
 
+/** --------------------------------------------------------------------------------------------------------------- */
 /* login to registration */
 
   let register_show = document.getElementById("register-show");
@@ -198,6 +200,7 @@ function calculateTotal() {
       if (!/^\d{10}$/.test(phoneNumber)) throw "Phone number must be exactly 10 digits.";
     }
 
+    /** --------------------------------------------------------------------------------------------------------------- */
     /* add product / local/global variable/objects */
     const addProductForm = document.getElementById("add-product-form");
     if(addProductForm){
@@ -234,6 +237,9 @@ function calculateTotal() {
       }
   }
 
+  /** --------------------------------------------------------------------------------------------------------------- */
+
+
     /* greeting */
     const greeting = document.getElementById("greeting");
     if(greeting){
@@ -249,7 +255,7 @@ function calculateTotal() {
     }
     
 
-
+  /** --------------------------------------------------------------------------------------------------------------- */
     
     /* event */
     const items = document.querySelectorAll("header .fa-solid");
@@ -261,6 +267,8 @@ function calculateTotal() {
         item.classList.remove("highlight");
         });
     });
+
+    /** --------------------------------------------------------------------------------------------------------------- */
 
     /* add to wishlist */
     function addToWishlist() {
@@ -274,12 +282,78 @@ function calculateTotal() {
         event.preventDefault();
     }
 
-    // 
+    /* checkout */
     function checkOut(){
         alert('You have checked out that item!');
         event.preventDefault();
     }
 
+    /** --------------------------------------------------------------------------------------------------------------- */
+    //validimi ne about us per form
+    
+    const aboutUsForm = document.getElementById("about-us-form");
+    if(aboutUsForm){
+
+      aboutUsForm.addEventListener("submit", (event) => {
+
+        event.preventDefault(); 
+        const jewelryType = document.getElementById("jewelryType").value;
+        const jewelryOptionsDatalist = document.getElementById("jewelryOptions");
+        const checkboxes = document.querySelectorAll('input[name="jewelry"]:checked');
+        const nrProductsNumber = document.getElementById("nrProducts").value;
+        const files = document.getElementById("files").value;
+        const message = document.getElementById("message").value;
+        
+        try {
+          validateDatalist(jewelryType, jewelryOptionsDatalist);
+          validateCheckList(checkboxes);
+          validateNumber(nrProductsNumber);
+          validateFile(files);
+          validateMessage(message);
+          alert("Message sent successfully!");
+        } 
+        
+        catch (error) {
+          console.error(error);
+          alert("Failed to send message: " + error);
+        }
+
+      });
+
+    }
+
+    // about us validation functions
+
+    function validateDatalist(value, datalist) {
+      const options = Array.from(datalist.options).map(option => option.value);
+      if (!options.includes(value)) throw new Error("Invalid selection. Choose from the list.");
+    }
+
+    function validateCheckList(checkboxes){
+      if (checkboxes.length === 0) {
+        throw new Error("Please select at least one type of jewelry.");
+      }
+    }
+
+    function validateNumber(nrProductsNumber){
+      if (!nrProductsNumber || nrProductsNumber < 1 || nrProductsNumber > 100) {
+        throw new Error("Please select a number between 1 and 100 for the number of products.");
+      }
+    }
+
+    function validateFile(files){
+      if (!files.length) {
+        throw new Error("Please select at least one file.");
+      }
+    }
+
+    function validateMessage(message){
+      if (!message) {
+        throw new Error("Please enter a message.");
+      }
+    }
+
+    /** --------------------------------------------------------------------------------------------------------------- */
   // per canvas
   const mouseCanvas = document.getElementById("mouseEffectCanvas");
   const mouseCtx = mouseCanvas.getContext("2d");
@@ -307,6 +381,7 @@ function calculateTotal() {
     const y = e.clientY - rect.top;
     drawEffect(x, y);
   });
+  
   //gradienti linear
   const canvas = document.getElementById('jewelryCanvas');
     const ctx = canvas.getContext('2d');
