@@ -137,21 +137,31 @@ function calculateTotal() {
             const productName = document.getElementById("product-name").value;
             const productPrice = document.getElementById("product-price").value;
 
-            // Krijo një objekt të ri
-            const newProduct = {
-                name: productName,
-                price: parseFloat(productPrice)
-            };
-            //variabla gloobale products
-            products.push(newProduct);
-            for(let i=0; i<products.length; i++){
-                console.log(products[i].name);
-                document.getElementById("display").innerHTML += "<li>"+products[i].name+" - $"+products[i].price+"</li>";  
-
-            }
-
+            addNewProduct(productName, productPrice);
       });
     }
+
+    function addNewProduct(productName, productPrice) {
+      try {
+          if (!productName || isNaN(productPrice)) {
+              throw new Error("Invalid product name or price");
+          }
+          const newProduct = { 
+            name: productName, 
+            price: parseFloat(productPrice) 
+          };
+          products.push(newProduct);
+          for(let i=0; i<products.length; i++){
+            console.log(products[i].name);
+            document.getElementById("display").innerHTML += "<li>"+products[i].name+" - $"+products[i].price+"</li>"; 
+          }
+          alert(`Product "${productName}" added successfully!`); 
+      } 
+      catch (error) {
+        console.error(error.message);
+        alert("Failed to add product: " + error.message);
+      }
+  }
 
     /* greeting */
     const greeting = document.getElementById("greeting");
@@ -167,8 +177,6 @@ function calculateTotal() {
       window.onload = greetingUsers;    
     }
     
-
-
 
 
     
