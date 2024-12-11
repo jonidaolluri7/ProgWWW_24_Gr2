@@ -1159,7 +1159,7 @@ header{
     color: var(--lightblue);
     position:absolute;
 }
-.callback{
+.callback,.nrManipulation{
     margin-top: 30px;
     width: 340px;
     height: 300px;
@@ -1175,23 +1175,6 @@ header{
     text-align: center;
     padding: 10px;
 }
-.igRegEx p{
-    font-size: 18px;
-    color: var(--darkpurple);
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-/* profile page */
-.profile-page{
-    position: relative;
-    top: 180px;
-    width: 80vw;
-    height: 40vw;
-    display: grid;
-    align-items: center;
-    margin: 0 auto;
-}
 .mathConstFunc {
     margin-top: 30px;
     width: 400px;
@@ -1202,18 +1185,26 @@ header{
     border-style: dotted dashed solid double;
     border-color: var(--darkpurple);
 }
-.mathConstFunc h1{
+.mathConstFunc h1, .nrManipulation h1{
     font-size: 15px;
     color: var(--darkpurple);
     text-align: center;
     padding: 10px;
 }
-.mathConstFunc p{
+.mathConstFunc p, .nrManipulation p{
     font-size: 14px;
     color: var(--darkpurple);
     text-align: left;
     padding: 10px;
 }
+.igRegEx p{
+    font-size: 18px;
+    color: var(--darkpurple);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 /* profile page */
 .profile-page{
     position: relative;
