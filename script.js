@@ -85,7 +85,7 @@ function displayProducts() {
         event.preventDefault();
     }
 
-    function logInAdmin() {
+    function logInAdmin() { 
       alert('You have been logged in!');
       window.location.replace('admin.html');
       event.preventDefault();
@@ -139,17 +139,20 @@ function displayProducts() {
     }
 
     /* greeting */
-
-    function greetingUsers() {
-        const greeting = document.getElementById("greeting");
+    const greeting = document.getElementById("greeting");
+    if(greeting){
+      function greetingUsers() {
         const now = new Date();
         const hours = now.getHours();
         console.log(hours);
         const time = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
         greeting.innerHTML = time + " Welcome to our jewelry collection.";
-    }
+      }
 
-    window.onload = greetingUsers;
+      window.onload = greetingUsers;    
+    }
+    
+
 
 
 
@@ -165,6 +168,18 @@ function displayProducts() {
         });
     });
 
+    /* add to wishlist */
+    function addToWishlist() {
+      alert('Added to Wishlist!');
+      event.preventDefault();
+    }
+
+    /* add to cart */
+    function addToCart() {
+        alert('Added to Cart!');
+        event.preventDefault();
+    }
+
 
 
     // 
@@ -173,77 +188,77 @@ function displayProducts() {
         event.preventDefault();
     }
 
-// per canvas
-const mouseCanvas = document.getElementById("mouseEffectCanvas");
-const mouseCtx = mouseCanvas.getContext("2d");
+  // per canvas
+  const mouseCanvas = document.getElementById("mouseEffectCanvas");
+  const mouseCtx = mouseCanvas.getContext("2d");
 
-function drawEffect(x, y) {
-  mouseCtx.clearRect(0, 0, mouseCanvas.width, mouseCanvas.height);
+  function drawEffect(x, y) {
+    mouseCtx.clearRect(0, 0, mouseCanvas.width, mouseCanvas.height);
 
-  const gradient = mouseCtx.createRadialGradient(x, y, 0, x, y, 10);
-  gradient.addColorStop(0, "#fff");
-  gradient.addColorStop(1, "#430b4c");
+    const gradient = mouseCtx.createRadialGradient(x, y, 0, x, y, 10);
+    gradient.addColorStop(0, "#fff");
+    gradient.addColorStop(1, "#430b4c");
 
-  mouseCtx.beginPath();
-  mouseCtx.arc(x, y, 50, 0, Math.PI * 2);
-  mouseCtx.fillStyle = gradient;
-  mouseCtx.fill();
+    mouseCtx.beginPath();
+    mouseCtx.arc(x, y, 50, 0, Math.PI * 2);
+    mouseCtx.fillStyle = gradient;
+    mouseCtx.fill();
 
-  mouseCtx.font = "20px Arial"; 
-  mouseCtx.fillStyle = "black"; 
-  mouseCtx.fillText("Jewelry", x+55, y); 
-}
+    mouseCtx.font = "20px Arial"; 
+    mouseCtx.fillStyle = "black"; 
+    mouseCtx.fillText("Jewelry", x+55, y); 
+  }
 
-mouseCanvas.addEventListener("mousemove", (e) => {
-  const rect = mouseCanvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  drawEffect(x, y);
-});
-//gradienti linear
-const canvas = document.getElementById('jewelryCanvas');
-  const ctx = canvas.getContext('2d');
+  mouseCanvas.addEventListener("mousemove", (e) => {
+    const rect = mouseCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    drawEffect(x, y);
+  });
+  //gradienti linear
+  const canvas = document.getElementById('jewelryCanvas');
+    const ctx = canvas.getContext('2d');
 
-  const gradient = ctx.createLinearGradient(0, 0, 400, 0);
-  gradient.addColorStop(0, '#fff');
-  gradient.addColorStop(1, '#430b4c');
+    const gradient = ctx.createLinearGradient(0, 0, 400, 0);
+    gradient.addColorStop(0, '#fff');
+    gradient.addColorStop(1, '#430b4c');
 
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, 500, 300);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 500, 300);
 
-  ctx.beginPath();
-  ctx.arc(150, 150, 100, 0, Math.PI * 2, false); 
-  ctx.fillStyle = 'white';
-  ctx.fill();
+    ctx.beginPath();
+    ctx.arc(150, 150, 100, 0, Math.PI * 2, false); 
+    ctx.fillStyle = 'white';
+    ctx.fill();
 
-  const img = new Image();
-  img.src = 'img/diamond.jpg'; 
-  img.onload = function () {
-    ctx.drawImage(img, 120, 120, 100, 100);
-  };
+    const img = new Image();
+    img.src = 'img/diamond.jpg'; 
+    img.onload = function () {
+      ctx.drawImage(img, 120, 120, 100, 100);
+    };
 
 
-// per audios qe te jene one at a time
-const audios = document.querySelectorAll('audio');
-audios.forEach(audio => {
-  audio.addEventListener('play', () => {
-    audios.forEach(otherAudio => {
-      if (otherAudio !== audio) {
-        otherAudio.pause();
-      }
+  // per audios qe te jene one at a time
+  const audios = document.querySelectorAll('audio');
+  audios.forEach(audio => {
+    audio.addEventListener('play', () => {
+      audios.forEach(otherAudio => {
+        if (otherAudio !== audio) {
+          otherAudio.pause();
+        }
+      });
     });
   });
-});
-// per videos qe te jene one at a time
-const videos = document.querySelectorAll('video');
-videos.forEach(video => {
-  video.addEventListener('play', () => {
-    videos.forEach(otherVideo => {
-      if (otherVideo !== video) {
-        otherVideo.pause();
-      }
+  // per videos qe te jene one at a time
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.addEventListener('play', () => {
+      videos.forEach(otherVideo => {
+        if (otherVideo !== video) {
+          otherVideo.pause();
+        }
+      });
     });
   });
-});
 
 

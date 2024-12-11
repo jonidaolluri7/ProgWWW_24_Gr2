@@ -5,23 +5,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
-    <script>
-        function addToCart() {
-            alert('Added to Cart!');
-            event.preventDefault();
-        }
-        function deleteFromCart(button) {
-            const userConfirmed = confirm('Are you sure you want to delete this item?');
-            if (userConfirmed) {
-                const item = button.parentElement; 
-                item.remove(); 
-                alert("Item deleted from cart.");
-            } else {
-                alert("Item not deleted.");
-            }
-            event.preventDefault();
-        }
-    </script>
 </head>
 <body> 
 <header class="header">
@@ -79,19 +62,7 @@
                 <input type="password" placeholder="Password" id="password" name="password"/>
                 <input type="submit" id="submit-button" name="edit" value="Edit">
             </form>
-        </div>
-        <h3>Drag the GeekforGeeks image into the rectangle:</h3>
-        <div id="getData" 
-             ondrop="drop(event)" 
-             ondragover="allowDrop(event)">
-          </div>
-        <br> 
-        <img id="dragData" 
-             src="img/400.png" 
-             draggable="true" 
-             ondragstart="drag(event)" 
-             width="250" 
-             height="200"> 
+        </div> 
     </section>
 </div>
 

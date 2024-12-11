@@ -6,16 +6,12 @@
     <script src="https://kit.fontawesome.com/b2520bc0f4.js" crossorigin="anonymous"></script>
     <title>Jewelry Shop</title>
     <script>
-        function addToCart() {
-            alert('Added to Cart!');
-            event.preventDefault();
-        }
-        function deleteFromCart(button) {
+        function deleteFromWishlist(button) {
             const userConfirmed = confirm('Are you sure you want to delete this item?');
             if (userConfirmed) {
                 const item = button.parentElement; 
                 item.remove(); 
-                alert("Item deleted from cart.");
+                alert("Item deleted from wishlist.");
             } else {
                 alert("Item not deleted.");
             }
@@ -73,6 +69,11 @@
         <div class="container-box">
             <form action="" method="POST" class="box">
                 <a href="viewproduct6.html"><img class="image" src="img/product6.jpg" /></a>
+                <p onclick="deleteFromWishlist(this)">
+                    <button type="submit" id="deleteFromCart" name="deleteFromCart">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </p>
                 <div class="flex">
                     <div>
                         <a class="line" href="viewproduct6.html">
@@ -86,11 +87,6 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </button>
                     </p>
-                    <p onclick="deleteFromCart(this)">
-                        <button type="submit" id="deleteFromCart" name="deleteFromCart">
-                            <i class="fa-solid fa-x"></i>
-                        </button>
-                    </p>
                 </div>
                 <input type="number" name="quantity" required min="1" value="1" max="99" maxlength="2" class="quantity">
                 <a class="btn" href="checkout.html">Buy Now</a>
@@ -98,6 +94,11 @@
         
             <form action="" method="POST" class="box">
                 <a href="viewproduct7.html"><img class="image" src="img/product7.jpg" /></a>
+                <p onclick="deleteFromWishlist(this)">
+                    <button type="submit" id="deleteFromCart" name="deleteFromCart">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </p>
                 <div class="flex">
                     <div>
                         <a class="line" href="viewproduct7.html">
@@ -109,11 +110,6 @@
                     <p onclick="addToCart()">
                         <button type="submit" id="addToCart" name="addToCart">
                             <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </p>
-                    <p onclick="deleteFromCart(this)">
-                        <button type="submit" id="deleteFromCart" name="deleteFromCart">
-                            <i class="fa-solid fa-x"></i>
                         </button>
                     </p>
                 </div>
