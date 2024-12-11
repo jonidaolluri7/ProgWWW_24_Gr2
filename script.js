@@ -576,3 +576,18 @@ function displaySpecialOffers() {
     offerContainer.appendChild(offerCard);
   }
 }
+/*--------------------------------------------------------------------------------------------------------------*/
+//number manipulation
+document.getElementsByClassName("minMaxValue")[0].textContent = "Min value: " + Number.MIN_VALUE + ", Max value: " + Number.MAX_VALUE;
+document.getElementsByClassName("posNegInfinity")[0].textContent = "Positive Infinity: " + Number.POSITIVE_INFINITY +"; Negative Infinity: " + Number.NEGATIVE_INFINITY;
+let number1 = 5.56789;
+let number2 = 0/0;
+document.getElementsByClassName("isNan")[0].textContent = "Is number1 NaN? " + isNaN(number1) +";   Is number2 NaN? " + isNaN(number2);
+
+let num1 = 12345.6789;
+document.getElementsByClassName("toExpon")[0].textContent = "Exponential: " + num1.toExponential(2);
+let num2 = 255;
+document.getElementsByClassName("hexBin")[0].textContent = "Hexadecimal: " + num2.toString(16) +"; Binary: " + num2.toString(2);
+document.getElementsByClassName("toPrecision")[0].textContent = "Precision: " + num1.toPrecision(3);
+let num5 = new Number(555); 
+document.getElementsByClassName("toFixedValueOf")[0].textContent = "Fixed: " + num1.toFixed(2) +"; ValueOf: " + num5.valueOf();
