@@ -574,16 +574,16 @@ document.getElementById("execRegEx").textContent = "The word amet is found at po
 
 
 //number manipulation
-document.getElementById("minMaxValue").textContent = "Min value: " + Number.MIN_VALUE + ", Max value: " + Number.MAX_VALUE;
-document.getElementById("posNegInfinity").textContent = "Positive Infinity: " + Number.POSITIVE_INFINITY +"; Negative Infinity: " + Number.NEGATIVE_INFINITY;
+document.getElementsByClassName("minMaxValue")[0].textContent = "Min value: " + Number.MIN_VALUE + ", Max value: " + Number.MAX_VALUE;
+document.getElementsByClassName("posNegInfinity")[0].textContent = "Positive Infinity: " + Number.POSITIVE_INFINITY +"; Negative Infinity: " + Number.NEGATIVE_INFINITY;
 let number1 = 5.56789;
 let number2 = 0/0;
-document.getElementById("isNan").textContent = "Is number1 NaN? " + isNaN(number1) +";   Is number2 NaN? " + isNaN(number2);
+document.getElementsByClassName("isNan")[0].textContent = "Is number1 NaN? " + isNaN(number1) +";   Is number2 NaN? " + isNaN(number2);
 
 let num1 = 12345.6789;
-document.getElementById("toExpon").textContent = "Exponential: " + num1.toExponential(2);
+document.getElementsByClassName("toExpon")[0].textContent = "Exponential: " + num1.toExponential(2);
 let num2 = 255;
-document.getElementById("hexBin").textContent = "Hexadecimal: " + num2.toString(16) +"; Binary: " + num2.toString(2);
-document.getElementById("toPrecision").textContent = "Precision: " + num1.toPrecision(3);
+document.getElementsByClassName("hexBin")[0].textContent = "Hexadecimal: " + num2.toString(16) +"; Binary: " + num2.toString(2);
+document.getElementsByClassName("toPrecision")[0].textContent = "Precision: " + num1.toPrecision(3);
 let num5 = new Number(555); 
-document.getElementById("toFixedValueOf").textContent = "Fixed: " + num1.toFixed(2) +"; ValueOf: " + num5.valueOf();
+document.getElementsByClassName("toFixedValueOf")[0].textContent = "Fixed: " + num1.toFixed(2) +"; ValueOf: " + num5.valueOf();

@@ -892,7 +892,6 @@ header{
 
 .tableA{
     margin-top: 60px;
-    border-spacing: 10px;
     table-layout: fixed;
     font-family: 'NewFont', sans-serif;
 }
@@ -905,7 +904,8 @@ header{
 }
 .tableA table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 5px;
     margin: 20px 0;
 }
 .tableA th, .tableA td {
@@ -917,7 +917,7 @@ header{
 .tableA th {
     background-color: #e7baef; 
     color: white;
-    background: radial-gradient(ellipse farthest-corner, #430b4c, #e0b6e6, #310137);
+    background: radial-gradient(ellipse , #430b4c, #e0b6e6, #310137);
     background-size: 200% 100%;
     background-position: top left;
     background-repeat: no-repeat;
@@ -1000,7 +1000,7 @@ header{
     margin-left: 80px;
 }
 .audioss ul{
-    list-style-type:none;
+    list-style-type:upper-roman;
 }
 /* per canvas */
 .canvasE{
@@ -1260,7 +1260,7 @@ header{
   }
   .profile-page .container i{
    font-size:40px ;
-   color: var(--darkpink);
+   color: var(--darkpurple);
   } 
 
 
