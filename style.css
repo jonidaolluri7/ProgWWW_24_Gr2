@@ -1139,6 +1139,9 @@ header{
     width: 340px;
     height: 300px;
     background-color: var(--purple);
+    border-width: 3px;
+    border-style: double;
+    border-color: var(--darkpurple);
 }
 .animate button, .callback button{
     padding: 10px 20px;
@@ -1162,6 +1165,9 @@ header{
     height: 300px;
     background-color: var(--purple);
     margin-left: 55px;
+    border-width: 3px;
+    border-style: ridge;
+    border-color: var(--darkpurple);
 }
 .callback p{
     font-size: 18px;

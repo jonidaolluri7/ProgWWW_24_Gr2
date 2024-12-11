@@ -356,8 +356,21 @@ $(document).ready(function(){
   });
 
   $("#buttonCallback").click(function(){
-    $("#textCallback").hide("slow", function(){
+    $("#randomDate").hide("slow", function(){
       alert("The paragraph is now hidden");
     });
   });
 });
+
+// get a random date permes date objektit
+function getRandomDate(startYear, endYear) {
+  const start = new Date(startYear, 0, 1).getTime(); 
+  const end = new Date(endYear, 11, 31).getTime(); 
+  const randomTime = Math.random() * (end - start) + start; 
+  return new Date(randomTime); 
+}
+const randomDate = getRandomDate(1998, 2003);
+document.getElementById("randomDate").textContent = randomDate.toDateString();
+// 
+const birthday = new Date(1998, 3, 0o5); 
+document.getElementById("textToShow").textContent = birthday.toDateString();
