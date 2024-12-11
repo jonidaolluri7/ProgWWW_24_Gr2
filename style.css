@@ -1171,6 +1171,15 @@ header{
     justify-content: center;        
     align-items: center;
   }
+  #original-container{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border: 1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   #dragData{
     width:200px; 
