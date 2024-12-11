@@ -195,8 +195,6 @@ function calculateTotal() {
         event.preventDefault();
     }
 
-
-
     // 
     function checkOut(){
         alert('You have checked out that item!');
@@ -295,3 +293,24 @@ function getLocation() {
       output.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
+
+// jquery
+$(document).ready(function() {
+  // When the user hovers over a product image, zoom in on it
+  $('.product-img').hover(function() {
+      $(this).css('transform', 'scale(1.2)');
+  }, function() {
+      $(this).css('transform', 'scale(1)');
+  });
+  
+});
+
+$(document).ready(function() {
+  $('#showButton').click(function() {
+      $('#textToShow').show(); 
+  });
+
+  $('#hideButton').click(function() {
+      $('#textToShow').hide();
+  });
+});
