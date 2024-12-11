@@ -34,7 +34,7 @@ if(slider){
 }
 
 
-/* display future products */
+/* display future products */ //edhe per web worker me llogarit qmimin total te ketyre produkteve
 let products = [
   { name: "Diamond Ring", price: 34 },
   { name: "Gold Necklace", price: 30 },
@@ -45,6 +45,10 @@ let products = [
   { name: "Ruby Bracelet", price: 70 },
   { name: "Topaz Earrings", price: 22 },
 ];
+
+//
+const worker = new Worker("worker.js");
+
 function displayProducts() {
   const productList = document.getElementById("product-list");
   productList.innerHTML = ""; 
@@ -55,6 +59,17 @@ function displayProducts() {
       listItem.textContent = `${products[i].name} - $${products[i].price}`;
       productList.appendChild(listItem);
   }
+
+  const calculateTotalBtn = document.getElementById("calculate-total-btn");
+    calculateTotalBtn.style.display = "inline-block";
+}
+function calculateTotal() {
+  worker.postMessage(products); 
+
+  worker.onmessage = function (event) {
+      const totalPrice = event.data; 
+      document.getElementById("total-price").textContent = `Total price: $${totalPrice}`;
+  };
 }
 
 /* login to registration */
@@ -262,3 +277,21 @@ function displayProducts() {
   });
 
 
+//per lokacion
+function getLocation() {
+  const output = document.getElementById("output");
+
+  if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+          (position) => {
+              const { latitude, longitude } = position.coords;
+              output.innerHTML = `Latitude: ${latitude}<br> Longitude: ${longitude}`;
+          },
+          (error) => {
+              output.innerHTML = `Error: ${error.message}`;
+          }
+      );
+  } else {
+      output.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}

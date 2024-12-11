@@ -810,7 +810,40 @@ header{
 .first:hover, .second:hover{
     transform: rotate(5deg); 
 }
-
+.geoLocation{
+    margin-top: 300px;
+    border: 2px solid var(--lightblue);
+    width: 25%;
+    height: 200px;
+    padding: 30px;
+    background-color: var(--lightblue);
+    text-align: center;
+    margin-left: 500px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+}
+.geoLocation h1{
+    text-align: center;
+    margin-bottom: 30px; 
+    color: var(--darkpurple);
+}
+.geoLocation button{
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--darkpurple);
+    color: var(--purple);
+    border: none;
+    margin-top: 10px;
+}
+.geoLocation button:hover{
+    background-color: var(--purple);
+    color: var(--darkpurple);
+}
+.geoLocation p{
+    font-size: 20px;
+    color: var(--darkpurple);
+    margin-top: 30px;
+}
 /* about us */
 .productsA{
     width: 25%;
@@ -874,7 +907,6 @@ header{
     padding: 10px; 
     text-align: center;
     color: var(--darkpurple);
-
 }
 .tableA th {
     background-color: #e7baef; 
@@ -894,7 +926,7 @@ header{
     border-style: dotted;
     border-color: var(--darkpurple);
     width: 50%;
-    height: 500px;
+    height: 550px;
     padding: 30px;
     background-color: var(--purple);
     text-align: left;
@@ -1026,6 +1058,17 @@ header{
     background-origin: padding-box;
     border-image: url('img/image.png') 30 round;
     padding: 10px;
+}
+.webWorkers{
+    width: 32.5%;
+    height: 300px;
+    background-color: var(--purple);
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 20px 20px 25px var(--darkpurple); 
+    border-width: 3px;
+    border-style: outset;
+    border-color: var(--darkpurple);
 }
 
 /* profile page */

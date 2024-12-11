@@ -144,7 +144,9 @@
         <div id="future-products">
             <div>
                 <h2>View future Products</h2>
-                <button class="button" onclick="displayProducts()">View Products</button>
+                <button class="button" onclick="displayProducts()">View Products</button><br>
+                <button class="button" id="calculate-total-btn" style="display: none;margin-top: 20px;" onclick="calculateTotal()">Total price</button>
+                <p id="total-price" style="margin-top: 30px; font-size: 20px;"></p>
             </div>  
             <ul id="product-list"></ul>
         </div>
