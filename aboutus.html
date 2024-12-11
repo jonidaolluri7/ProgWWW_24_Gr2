@@ -45,12 +45,12 @@
             </div>        
             <div>
                 <h1>Our history</h1>
-                <p> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                <p id="replace"> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                      tempor incididunt ut labore et dolore magna aliqua. Eu consequat ac felis
                       donec et odio pellentesque diam. Sit amet facilisis magna etiam tempor orci eu.
                        Elementum sagittis vitae et leo duis.
-                       <span style="color: rgb(146, 102, 160);font-family: 'Arial', sans-serif;" title="span element"> Amet commodo nulla facilisi nullam 
-                       vehicula ipsum a arcu cursus. </span>
+                        Amet commodo nulla facilisi nullam 
+                       vehicula ipsum a arcu cursus. 
                 </p>
             </div>
         </div>
@@ -214,7 +214,7 @@
         <div class="third" style="display: flex;">
             <div class="canvasE">
                 <h1>Mouse Effect</h1>
-                <canvas id="mouseEffectCanvas" width="400" height="200" style="margin-top: 40px;"></canvas>
+                <canvas id="mouseEffectCanvas" width="400" height="200" style="margin-top: 40px;">i</canvas>
             </div>
             <article class="articleA">
                 <h1>Multiple images</h1>
@@ -245,7 +245,82 @@
             <div class="hideShow">
                 <button id="showButton">Show text</button>
                 <button id="hideButton">Hide text</button>
-                <p id="textToShow" style="display:none;">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu consequat ac felis donec et odio pellentesque diam. Sit amet facilisis magna etiam tempor orci eu.</p>
+                <p id="textToShow" style="display:none;"></p>
+            </div>
+           
+            <div class="fadeEffect">
+                <div class="fadeIn" style="display: flex;">
+                    <button id="buttonFadeIn">Fade in button</button>
+                    <p id="textFadeIn" style="display: none;">Fade in</p>
+                    <p id="textFadeTo">Fade to</p>
+                </div>
+                <div class="fadeOut" style="display: flex;">
+                    <button id="buttonFadeOut">Fade out button</button>
+                    <p id="textFadeOut">Fade out</p>
+                    <p id="textFadeToggle">Fade Toggle</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sixth" style="display: flex;">
+            <div class="slideUp">
+                <p id="clickText1">Click to slide it up.</p>
+                <p id="shownText1">Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+           
+            <div class="slideDown">
+                <p id="clickText2">Click to slide it down.</p>
+                <p id="shownText2" style="display: none;">Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            
+            <div class="slideToggle">
+                <p id="clickText3">Click to slide it up or down</p>
+                <p id="shownText3">Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="seventh" style="display: flex;">
+            <div class="animate">
+                <button id="animateButton">Animate</button>
+                <div id="animateDiv">Hi!!!</div>
+            </div>
+
+            <div class="callback">
+                <button id="buttonCallback">Press it</button>
+                <p id="randomDate"></p>
+            </div>
+
+            <div class="mathConstFunc">
+                <h1>Math Constants and Functions</h1>
+                <p id="result1"></p>
+                <p id="result2"></p>
+                <p id="result3"></p>
+                <p id="result4"></p>
+                <p id="result5"></p>
+                <p id="result6"></p>
+            </div>
+
+        </div>
+
+        <div class="eight" style="display: flex;">
+            <div class="igRegEx">
+                <p id="tekstiRegEx">Ipsum dolor sit amet, consectetur adipiscing elit. Sit amet facilisis magna etiam tempor orci eu.
+                       Amet commodo.</p>
+                <p id="iRegEx"></p>
+                <p id="gRegEx"></p>
+                <p id="testRegEx"></p>
+                <p id="execRegEx"></p>
+            </div>
+
+            <div class="nrManipulation">
+                <h1>Number Manipulation</h1>
+                <p id="minMaxValue"></p>
+                <p id="posNegInfinity"></p>
+                <p id="isNan"></p>
+                <p id="toExpon"></p>
+                <p id="hexBin"></p>
+                <p id="toPrecision"></p>
+                <p id="toFixedValueOf"></p>
             </div>
         </div>
     </div>
