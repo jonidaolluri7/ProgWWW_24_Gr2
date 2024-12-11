@@ -94,38 +94,109 @@ function calculateTotal() {
       }
 
     /* login/register methods */
+    //log in as user
     function logInUser() {
-        alert('You have been logged in!');
-        window.location.replace('profile.html');
-        event.preventDefault();
+      
+      alert('You have been logged in!');
+      window.location.replace('profile.html');
+      event.preventDefault();
     }
 
+    //log in as admin
     function logInAdmin() { 
       alert('You have been logged in!');
       window.location.replace('admin.html');
       event.preventDefault();
-  }
-
-    function register(){
-        alert('You have a new account!');
-        event.preventDefault();
     }
 
+    //register validation
+    function register(){
+
+      const name = document.getElementById("name").value;
+      const lastname = document.getElementById("lastname").value;
+      const email = document.getElementById("email").value;
+      const tel = document.getElementById("tel").value;
+      const password = document.getElementById("password").value;
+      
+      try{
+        validateName(name);
+        validateLastname(lastname);
+        validateEmail(email);
+        validatePhoneNumber(tel);
+        validatePassword(password);
+        alert('You have a new account!');
+        event.preventDefault();
+      } 
+      
+      catch(error){
+        console.error(error.message);
+        alert("Failed to register: " + (error));
+      }
+
+    }
+
+    //login validation
+    //admin and user login
     const users = { email: "admin@gmail.com", password: "123"};
     const loginForm = document.getElementById("login-f");
     if(loginForm){
         loginForm.addEventListener("submit", function(event) {
+          
           event.preventDefault();
           const email = document.getElementById("lemail").value;
           const password = document.getElementById("lpassword").value;
-          if(email === users.email && password === users.password){
-            logInAdmin();
-          } else {
-            logInUser();
+          
+          try{
+            validateEmail(email);
+            validatePassword(password);
+            if(email === users.email && password === users.password){
+              logInAdmin();
+            } 
+            else {
+              logInUser();
+            }
           }
+          
+          catch(error){
+            console.error(error.message);
+            alert("Failed to log in: " + (error.message || error));
+          }
+
         });
     }
 
+    //validation functions
+    function validateEmail(email) {
+      if (!email) throw "Email cannot be empty.";
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) throw "Invalid email format.";
+    }
+
+    function validatePassword(password) {
+      if (!password) throw "Password cannot be empty.";
+      if (password.length < 6) throw "Password must be at least 6 characters long.";
+      if (!/[A-Z]/.test(password)) throw "Password must contain at least one uppercase letter.";
+      if (!/[a-z]/.test(password)) throw "Password must contain at least one lowercase letter.";
+      if (!/[0-9]/.test(password)) throw "Password must contain at least one number.";
+      if (!/[!@#$%^&*]/.test(password)) throw "Password must contain at least one special character.";
+    }
+
+    function validateName(name) {
+      if (!name) throw "Name cannot be empty.";
+      if (name.length < 2) throw "Name must be at least 2 characters long.";
+      if (!/^[A-Za-z\s]+$/.test(name)) throw "Name can only contain letters and spaces.";
+    }
+
+    function validateLastname(lastname) {
+      if (!lastname) throw "Last name cannot be empty.";
+      if (lastname.length < 2) throw "Last name must be at least 2 characters long.";
+      if (!/^[A-Za-z\s]+$/.test(lastname)) throw "Last name can only contain letters and spaces.";
+    }
+
+    function validatePhoneNumber(phoneNumber) {
+      if (!phoneNumber) throw "Phone number cannot be empty.";
+      if (!/^\d{10}$/.test(phoneNumber)) throw "Phone number must be exactly 10 digits.";
+    }
 
     /* add product / local/global variable/objects */
     const addProductForm = document.getElementById("add-product-form");
@@ -143,7 +214,7 @@ function calculateTotal() {
 
     function addNewProduct(productName, productPrice) {
       try {
-          if (!productName || isNaN(productPrice)) {
+          if (!productName || !productPrice || isNaN(productPrice)) {
               throw new Error("Invalid product name or price");
           }
           const newProduct = { 
