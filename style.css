@@ -435,6 +435,7 @@ header{
     display: flex; 
     flex-direction: column; 
     gap: 10px; 
+    margin-right: 20%;
 }
 
 #future-products #product-list li, #display li{
