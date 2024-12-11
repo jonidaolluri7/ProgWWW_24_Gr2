@@ -146,13 +146,20 @@
                 <label for="watches">Watches</label><br><br>
 
                 <label for="jewelryType">Choose which jewelry you wear the most:</label>
-                <input style="padding: 10px; background-color: rgb(222, 204, 220); border: 1px solid rgb(222, 204, 220); " list="jewelryOptions" id="jewelryType" name="jewelryType" placeholder="Select or type"> 
+                <input style="padding: 10px; background-color: rgb(222, 204, 220); border: 1px solid rgb(222, 204, 220);" list="jewelryOptions" id="jewelryType" name="jewelryType" placeholder="Select or type"> 
                 <datalist id="jewelryOptions">
                     <option value="Ring"></option>
                     <option value="Necklace"></option>
                     <option value="Earrings"></option>
                     <option value="Bracelet"></option>
                 </datalist><br><br>
+               
+                <label for="nrProducts">Select how many products you would like to buy:</label>
+                <input style="padding: 15px; background-color: rgb(222, 204, 220); border: 1px solid rgb(222, 204, 220); width: 140px;" type="number" id="nrProducts" name="nrProducts" min="1" max="100" step="1" placeholder="Products (1-100)"><br><br>
+
+                <label for="files">Choose document or a file:</label>
+                <input type="file" id="files" name="files" multiple style="padding: 10px; color:black; background-color: rgb(222, 204, 220); border: 1px solid rgb(222, 204, 220);"><br><br>
+                
                 <label for="securityKey">Generate Security Key:</label>
                 <keygen id="securityKey" name="keygen"><br><br>
                     
@@ -235,7 +242,7 @@
 
         <div class="fifth" style="display: flex;">
             <div class="webWorkers">
-                
+
             </div>
         </div>
     </div>
