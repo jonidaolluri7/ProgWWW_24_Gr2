@@ -403,10 +403,15 @@ header{
     height: 150px;
     float: right;
 }
+#offers-image2{
+    width: 400px;
+    height: 150px;
+    float: left;
+}
 
 /* more */
 #more{
-    margin-top: 10rem;
+    margin-top: 15rem;
     column-count: 3;  
     column-gap: 10rem; 
     column-rule: 1px solid black;
