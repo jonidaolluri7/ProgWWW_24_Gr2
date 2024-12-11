@@ -1255,7 +1255,7 @@ header{
   }
   .profile-page .container i{
    font-size:40px ;
-   color: var(--darkpink);
+   color: var(--darkpurple);
   } 
 
 
@@ -1298,4 +1298,23 @@ header{
   #dropText{
     color: var(--darkpurple);
     border-bottom: 3px solid var(--darkpurple);
+  }
+
+
+  /* feedback , customer */
+  .feedback-card, .customer-card, .offer-card {
+    border: 1px solid var(--darkpurple);
+    background-color: var(--lightblue);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .feedback-card h3 {
+    margin: 0 0 5px;
+    color: #333;
+  }
+  .feedback-card p, .customer-card p, .offer-card p {
+    margin: 5px 0;
+    color: #555;
   }
