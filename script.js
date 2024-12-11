@@ -370,7 +370,32 @@ function getRandomDate(startYear, endYear) {
   return new Date(randomTime); 
 }
 const randomDate = getRandomDate(1998, 2003);
+console.log(randomDate.toDateString());
 document.getElementById("randomDate").textContent = randomDate.toDateString();
 // 
 const birthday = new Date(1998, 3, 0o5); 
 document.getElementById("textToShow").textContent = birthday.toDateString();
+
+// konstatet dhe funksionet matematikore
+const PI = Math.PI;
+const E = Math.E;
+const SQRT2 = Math.SQRT2;
+const LN2 = Math.LN2;
+const LN10 = Math.LN10;
+
+const area= PI * Math.pow(5, 2);
+console.log(area);
+document.getElementById("result1").textContent = "PI= "+PI+", area of circle = "+area;
+
+const exponent = Math.exp(2);//e^2
+document.getElementById("result2").textContent = "E= "+E+", e^2 = "+exponent;
+
+const squareRoot9 = Math.sqrt(9);
+document.getElementById("result3").textContent = "SQRT2= "+SQRT2+", square root of 9 = "+squareRoot9;
+document.getElementById("result4").textContent = "LN2= "+LN2+", LN10= "+LN10;
+
+const randomValue = Math.random() * 100;
+const roundedValue = Math.round(randomValue);
+const floorValue = Math.floor(randomValue);
+document.getElementById("result5").textContent = "Random value: "+randomValue+", rounded value: "+roundedValue+", floor value: "+floorValue;
+
