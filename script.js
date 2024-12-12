@@ -139,7 +139,7 @@ function calculateTotal() {
 
     //login validation
     //admin and user login
-    const users = { email: "admin@gmail.com", password: "123"};
+    const users = { email: "admin@gmail.com", password: "Admin@123"};
     const loginForm = document.getElementById("login-f");
     if(loginForm){
         loginForm.addEventListener("submit", function(event) {
@@ -296,7 +296,6 @@ function calculateTotal() {
 
       aboutUsForm.addEventListener("submit", (event) => {
 
-        event.preventDefault(); 
         const jewelryType = document.getElementById("jewelryType").value;
         const jewelryOptionsDatalist = document.getElementById("jewelryOptions");
         const checkboxes = document.querySelectorAll('input[name="jewelry"]:checked');
@@ -310,7 +309,6 @@ function calculateTotal() {
           validateNumber(nrProductsNumber);
           validateFile(files);
           validateMessage(message);
-          alert("Message sent successfully!");
         } 
         
         catch (error) {
@@ -326,6 +324,8 @@ function calculateTotal() {
 
     function validateDatalist(value, datalist) {
       const options = Array.from(datalist.options).map(option => option.value);
+      console.log("Validating datalist: ", value, options);
+
       if (!options.includes(value)) throw new Error("Invalid selection. Choose from the list.");
     }
 
@@ -684,3 +684,26 @@ function displaySpecialOffers() {
     offerContainer.appendChild(offerCard);
   }
 }
+
+// per kerkim
+function findNumbers(text) {
+  const numberRegex = /\b\d+(\.\d+)?\b/g;
+  return text.match(numberRegex) || [];
+}
+function findAllCapsWords(text) {
+  const capsRegex = /\b[A-Z]+\b/g;
+  return text.match(capsRegex) || [];
+}
+function findHashtags(text) {
+  const hashtagRegex = /#\w+/g;
+  return text.match(hashtagRegex) || [];
+}
+
+const text10 = document.getElementsByClassName("textSearch")[0].textContent;
+const text11 =document.getElementById("result5").textContent;
+const numbers3 = findNumbers(text11);
+const capsWords = findAllCapsWords(text10);
+const hashtags = findHashtags(text10);
+document.getElementById("nrSearch").textContent = "Numbers found: " + numbers3.join(", ");
+document.getElementById("capWordsSearch").textContent = "Capitalized words found: " + capsWords.join(", ");
+document.getElementById("hashtagSearch").textContent = "Hashtags found: " + hashtags.join(", ");

@@ -1180,7 +1180,7 @@ header{
     text-align: center;
     padding: 10px;
 }
-.mathConstFunc {
+.mathConstFunc, .kerkimiJS {
     margin-top: 30px;
     width: 400px;
     height: 300px;
@@ -1196,7 +1196,7 @@ header{
     text-align: center;
     padding: 10px;
 }
-.mathConstFunc p, .nrManipulation p{
+.mathConstFunc p, .nrManipulation p, .kerkimiJS p{
     font-size: 14px;
     color: var(--darkpurple);
     text-align: left;
