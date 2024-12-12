@@ -127,6 +127,7 @@ function calculateTotal() {
         validatePhoneNumber(tel);
         validatePassword(password);
         alert('You have a new account!');
+        window.location.replace('profile.html');
         event.preventDefault();
       } 
       
@@ -284,9 +285,59 @@ function calculateTotal() {
 
     /* checkout */
     function checkOut(){
-        alert('You have checked out that item!');
-        event.preventDefault();
+      event.preventDefault(); 
+      const name = document.getElementById("nameC").value;
+      const lastname = document.getElementById("lastnameC").value;
+      const email = document.getElementById("emailC").value;
+      const tel = document.getElementById("telC").value;
+      const address = document.getElementById("address").value;
+      const country = document.getElementById("country").value;
+      const city = document.querySelector("select[name='city']").value;
+      const cardNumber = document.getElementById("card-number").value;
+      const paymentMethod = document.querySelector("input[name='method']:checked");      
+      try{
+        validateName(name);
+        validateLastname(lastname);
+        validateEmail(email);
+        validatePhoneNumber(tel);
+        validateAddress(address);
+        validateCountry(country);
+        validateCity(city);
+        validateCardNumber(cardNumber);
+        validatePaymentMethod(paymentMethod);
+        alert('You completed the payment!');
+        window.location.replace('products.html');
+      } 
+      
+      catch(error){
+        console.error(error.message);
+        alert("Failed to buy: " + (error));
+      }
     }
+
+    function validateAddress(address) {
+      if (!address) throw "Address cannot be empty.";
+      if (address.length < 5) throw "Address must be at least 5 characters long.";
+  }
+  
+  function validateCountry(country) {
+      if (!country) throw "Country cannot be empty.";
+      if (country.length < 3) throw "Country must be at least 3 characters long.";
+      if (!/^[A-Za-z\s]+$/.test(country)) throw "Country can only contain letters and spaces.";
+  }
+  
+  function validateCity(city) {
+      if (!city) throw "Please select a city.";
+  }
+  
+  function validateCardNumber(cardNumber) {
+      if (!cardNumber) throw "Card number cannot be empty.";
+      if (!/^\d{16}$/.test(cardNumber)) throw "Card number must be exactly 16 digits.";
+  }
+  
+  function validatePaymentMethod(paymentMethod) {
+      if (!paymentMethod) throw "Please select a payment method.";
+  }
 
     /** --------------------------------------------------------------------------------------------------------------- */
     //validimi ne about us per form
@@ -707,3 +758,7 @@ const hashtags = findHashtags(text10);
 document.getElementById("nrSearch").textContent = "Numbers found: " + numbers3.join(", ");
 document.getElementById("capWordsSearch").textContent = "Capitalized words found: " + capsWords.join(", ");
 document.getElementById("hashtagSearch").textContent = "Hashtags found: " + hashtags.join(", ");
+
+
+
+
