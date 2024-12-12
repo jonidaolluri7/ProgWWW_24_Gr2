@@ -381,7 +381,7 @@ function calculateTotal() {
     const y = e.clientY - rect.top;
     drawEffect(x, y);
   });
-
+  
   //gradienti linear
   const canvas = document.getElementById('jewelryCanvas');
     const ctx = canvas.getContext('2d');
@@ -459,6 +459,7 @@ $(document).ready(function() {
   
 });
 
+//hide show 
 $(document).ready(function() {
   $('#showButton').click(function() {
       $('#textToShow').show(); 
@@ -468,15 +469,127 @@ $(document).ready(function() {
       $('#textToShow').hide();
   });
 });
+//fade in fade out  
+$(document).ready(function() {
+  $('#buttonFadeIn').click(function() {
+      $('#textFadeIn').fadeIn("slow"); 
+      $("#textFadeTo").fadeTo("slow", 0.15);
 
-/*--------------------------------------------------------------------------------------------------------------*/
+  });
 
-function CustomerFeedback(name, email, message) {
-  this.name = name;
-  this.email = email;
-  this.message = message;
+  $('#buttonFadeOut').click(function() {
+      $('#textFadeOut').fadeOut();
+      $("#textFadeToggle").fadeToggle(3000);
+
+  });
+});
+//slide and animate and callback
+$(document).ready(function(){
+  $("#clickText1").click(function(){
+    $("#shownText1").slideUp("slow");
+  });
+  $("#clickText2").click(function(){
+    $("#shownText2").slideDown("slow");
+  });
+  $("#clickText3").click(function(){
+    $("#shownText3").slideToggle("slow");
+  });
+
+  $("#animateButton").click(function(){
+    var div = $("#animateDiv");  
+    div.animate({left: '100px'}, "slow");
+    div.animate({fontSize: '3em'}, "slow");
+  });
+
+  $("#buttonCallback").click(function(){
+    $("#randomDate").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+
+// get a random date permes date objektit
+function getRandomDate(startYear, endYear) {
+  const start = new Date(startYear, 0, 1).getTime(); 
+  const end = new Date(endYear, 11, 31).getTime(); 
+  const randomTime = Math.random() * (end - start) + start; 
+  return new Date(randomTime); 
+}
+const randomDate = getRandomDate(1998, 2003);
+console.log(randomDate.toDateString());
+document.getElementById("randomDate").textContent = randomDate.toDateString();
+// 
+const birthday = new Date(1998, 3, 0o5); 
+document.getElementById("textToShow").textContent = birthday.toDateString();
+
+// konstatet dhe funksionet matematikore
+const PI = Math.PI;
+const E = Math.E;
+const SQRT2 = Math.SQRT2;
+const LN2 = Math.LN2;
+const LN10 = Math.LN10;
+
+const area= PI * Math.pow(5, 2);
+console.log(area);
+document.getElementById("result1").textContent = "PI= "+PI+", area of circle = "+area;
+
+const exponent = Math.exp(2);//e^2
+document.getElementById("result2").textContent = "E= "+E+", e^2 = "+exponent;
+
+const squareRoot9 = Math.sqrt(9);
+document.getElementById("result3").textContent = "SQRT2= "+SQRT2+", square root of 9 = "+squareRoot9;
+document.getElementById("result4").textContent = "LN2= "+LN2+", LN10= "+LN10;
+
+const randomValue = Math.random() * 100;
+const roundedValue = Math.round(randomValue);
+const floorValue = Math.floor(randomValue);
+document.getElementById("result5").textContent = "Random value: "+randomValue+", rounded value: "+roundedValue+", floor value: "+floorValue;
+
+//replace and match
+let tekstii = document.getElementById("replace").textContent;
+tekstii = tekstii.replace(/amet/g, "!!!!!");
+document.getElementById("replace").textContent = tekstii;
+
+const teksti2 = document.getElementById("randomDate").textContent;
+const numbers = teksti2.match(/\d+/g); //find all the numbers
+if (numbers) {
+  document.getElementById("result6").textContent = "Numbers found: " + numbers.join(', ');
+} else {
+  document.getElementById("result6").textContent = "No numbers found.";
 }
 
+//i,g regex
+const teksti = document.getElementById("tekstiRegEx").textContent;
+const words2 = teksti.match(/amet/gi); //case insensitive
+document.getElementById("iRegEx").textContent = "Found the word 'amet' " + words2.length + " times.";
+const words = teksti.match(/amet/g); //case sensitive
+document.getElementById("gRegEx").textContent = "Found the word 'amet' " + words.length + " times.";
+//text
+const pattern = /amet/;
+const result = pattern.test(teksti);
+document.getElementById("testRegEx").textContent = "The paragraph contains the word amet? - " + result;
+//exec
+const result2 = pattern.exec(teksti);
+document.getElementById("execRegEx").textContent = "The word amet is found at position " + result2.index;
+
+
+//number manipulation
+document.getElementsByClassName("minMaxValue")[0].textContent = "Min value: " + Number.MIN_VALUE + ", Max value: " + Number.MAX_VALUE;
+document.getElementsByClassName("posNegInfinity")[0].textContent = "Positive Infinity: " + Number.POSITIVE_INFINITY +"; Negative Infinity: " + Number.NEGATIVE_INFINITY;
+let number1 = 5.56789;
+let number2 = 0/0;
+document.getElementsByClassName("isNan")[0].textContent = "Is number1 NaN? " + isNaN(number1) +";   Is number2 NaN? " + isNaN(number2);
+
+let num1 = 12345.6789;
+document.getElementsByClassName("toExpon")[0].textContent = "Exponential: " + num1.toExponential(2);
+let num2 = 255;
+document.getElementsByClassName("hexBin")[0].textContent = "Hexadecimal: " + num2.toString(16) +"; Binary: " + num2.toString(2);
+document.getElementsByClassName("toPrecision")[0].textContent = "Precision: " + num1.toPrecision(3);
+let num5 = new Number(555); 
+document.getElementsByClassName("toFixedValueOf")[0].textContent = "Fixed: " + num1.toFixed(2) +"; ValueOf: " + num5.valueOf();
+
+
+// 
 function displayFeedback() {
   const feedback1 = new CustomerFeedback(
     "Loreta",
@@ -499,7 +612,6 @@ function displayFeedback() {
     "Good quality!"
   );
   const feedbackList = [feedback1, feedback2, feedback3, feedback4];
-
   const feedbackContainer = document.getElementById("feedback-container");
   feedbackContainer.innerHTML = ""; 
   for (let i = 0; i < feedbackList.length; i++) {
@@ -512,12 +624,9 @@ function displayFeedback() {
       <p><strong>Email:</strong> ${feedback.email}</p>
       <p>${feedback.message}</p>
     `;
-
     feedbackContainer.appendChild(feedbackCard);
   }
 }
-
-/*--------------------------------------------------------------------------------------------------------------*/
 
 
 function LoyaltyCustomer(name, points, tier) {
@@ -530,7 +639,6 @@ function displayCustomer() {
   const customer1 = new LoyaltyCustomer("Jonida", 1500, "Gold");
   const customer2 = new LoyaltyCustomer("Loreta", 800, "Silver");
   const customerList = [customer1, customer2];
-
   const customerContainer = document.getElementById("customer-container");
   customerContainer.innerHTML = ""; 
   for (let i = 0; i < customerList.length; i++) {
@@ -543,19 +651,15 @@ function displayCustomer() {
       <h4>${customer.points} points</p>
       <p>${customer.tier} tier</p>
     `;
-
     customerContainer.appendChild(customerCard);
   }
 }
 
-
-/*--------------------------------------------------------------------------------------------------------------*/
 function SpecialOffer(name, discount, duration) {
   this.name = name; 
   this.discount = discount; 
   this.duration = duration; 
 }
-
 function displaySpecialOffers() {
   const offer1 = new SpecialOffer("Winter Sale", 20, "1 week");
   const offer2 = new SpecialOffer("Holiday Discount", 25, "10 days");
@@ -572,22 +676,6 @@ function displaySpecialOffers() {
       <p>Discount: ${offer.discount}%</p>
       <p>Duration: ${offer.duration}</p>
     `;
-
     offerContainer.appendChild(offerCard);
   }
 }
-/*--------------------------------------------------------------------------------------------------------------*/
-//number manipulation
-document.getElementsByClassName("minMaxValue")[0].textContent = "Min value: " + Number.MIN_VALUE + ", Max value: " + Number.MAX_VALUE;
-document.getElementsByClassName("posNegInfinity")[0].textContent = "Positive Infinity: " + Number.POSITIVE_INFINITY +"; Negative Infinity: " + Number.NEGATIVE_INFINITY;
-let number1 = 5.56789;
-let number2 = 0/0;
-document.getElementsByClassName("isNan")[0].textContent = "Is number1 NaN? " + isNaN(number1) +";   Is number2 NaN? " + isNaN(number2);
-
-let num1 = 12345.6789;
-document.getElementsByClassName("toExpon")[0].textContent = "Exponential: " + num1.toExponential(2);
-let num2 = 255;
-document.getElementsByClassName("hexBin")[0].textContent = "Hexadecimal: " + num2.toString(16) +"; Binary: " + num2.toString(2);
-document.getElementsByClassName("toPrecision")[0].textContent = "Precision: " + num1.toPrecision(3);
-let num5 = new Number(555); 
-document.getElementsByClassName("toFixedValueOf")[0].textContent = "Fixed: " + num1.toFixed(2) +"; ValueOf: " + num5.valueOf();
