@@ -590,6 +590,11 @@ document.getElementsByClassName("toFixedValueOf")[0].textContent = "Fixed: " + n
 
 
 // 
+function CustomerFeedback(name, email, message) {
+  this.name = name;
+  this.email = email;
+  this.message = message;
+}
 function displayFeedback() {
   const feedback1 = new CustomerFeedback(
     "Loreta",
